@@ -13,7 +13,9 @@
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="{{asset('assets/dashboard/fonts/icofont/icofont.min.css')}}">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.css" integrity="sha512-CB+XYxRC7cXZqO/8cP3V+ve2+6g6ynOnvJD6p4E4y3+wwkScH9qEOla+BTHzcwB4xKgvWn816Iv0io5l3rAOBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.css"
+          integrity="sha512-CB+XYxRC7cXZqO/8cP3V+ve2+6g6ynOnvJD6p4E4y3+wwkScH9qEOla+BTHzcwB4xKgvWn816Iv0io5l3rAOBA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,9 +31,10 @@
     <!-- Sidebar Start -->
     <div class="side-navbar">
         <div class="menu-icon text-right">
-            <svg class="d-none d-lg-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="37" height="27">
-                <path fill="none" d="M0 0h24v24H0z" />
-                <path fill="#fff" d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z" />
+            <svg class="d-none d-lg-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="37"
+                 height="27">
+                <path fill="none" d="M0 0h24v24H0z"/>
+                <path fill="#fff" d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"/>
             </svg>
             <i class="icofont-ui-close d-block d-lg-none p-3" onclick={navbarHide()}></i>
         </div>
@@ -39,36 +42,44 @@
             @if(Auth::user()->role=='user')
 
                 <li class="nav-item">
-                    <a class="nav-link active" href="{{url('user/index')}}"> <img src="{{asset('assets/dashboard/img/dashboard.png')}}" alt="dashboard-icon"
-                                                              class="menu-icon"> Dashboard</a>
+                    <a class="nav-link active" href="{{url('user/index')}}"> <img
+                            src="{{asset('assets/dashboard/img/dashboard.png')}}" alt="dashboard-icon"
+                            class="menu-icon"> Dashboard</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="{{url('user/upload')}}"> <img src="{{asset('assets/dashboard/img/upload.png')}}" alt="dashboard-icon" class="menu-icon">
+                    <a class="nav-link " href="{{url('user/upload')}}"> <img
+                            src="{{asset('assets/dashboard/img/upload.png')}}" alt="dashboard-icon" class="menu-icon">
                         Upload</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="{{url('user/status')}}"> <img src="{{asset('assets/dashboard/img/status.png')}}" alt="dashboard-icon" class="menu-icon">
+                    <a class="nav-link " href="{{url('user/status')}}"> <img
+                            src="{{asset('assets/dashboard/img/status.png')}}" alt="dashboard-icon" class="menu-icon">
                         Status</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="{{url('user/report')}}"> <img src="{{asset('assets/dashboard/img/rela.png')}}" alt="dashboard-icon" class="menu-icon">
+                    <a class="nav-link " href="{{url('user/report')}}"> <img
+                            src="{{asset('assets/dashboard/img/rela.png')}}" alt="dashboard-icon" class="menu-icon">
                         Relatórios</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="{{url('user/myprofile')}}"> <img src="{{asset('assets/dashboard/img/profile.png')}}" alt="dashboard-icon" class="menu-icon">
+                    <a class="nav-link " href="{{url('user/myprofile')}}"> <img
+                            src="{{asset('assets/dashboard/img/profile.png')}}" alt="dashboard-icon" class="menu-icon">
                         Meu Perfil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="{{url('user/refrel')}}"> <img src="{{asset('assets/dashboard/img/afil.png')}}" alt="dashboard-icon" class="menu-icon">
+                    <a class="nav-link " href="{{url('user/refrel')}}"> <img
+                            src="{{asset('assets/dashboard/img/afil.png')}}" alt="dashboard-icon" class="menu-icon">
                         Afiliados</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="{{url('user/history')}}"> <img src="{{asset('assets/dashboard/img/history.png')}}" alt="dashboard-icon" class="menu-icon">
+                    <a class="nav-link " href="{{url('user/history')}}"> <img
+                            src="{{asset('assets/dashboard/img/history.png')}}" alt="dashboard-icon" class="menu-icon">
                         History</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link " href="{{url('logout')}}"> <img src="{{asset('assets/dashboard/img/history.png')}}" alt="dashboard-icon" class="menu-icon">
+                    <a class="nav-link " href="{{url('logout')}}"> <img
+                            src="{{asset('assets/dashboard/img/history.png')}}" alt="dashboard-icon" class="menu-icon">
                         Logout</a>
                 </li>
 
@@ -80,35 +91,40 @@
             @if(Auth::user()->role=='admin')
 
 
-                    <li class="nav-item">
-                        <a class="nav-link active" href="{{url('admin/index')}}"> <img src="{{asset('assets/dashboard/img/dashboard.png')}}" alt="dashboard-icon"
-                                                                                      class="menu-icon"> Dashboard</a>
-                    </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="{{url('admin/index')}}"> <img
+                            src="{{asset('assets/dashboard/img/dashboard.png')}}" alt="dashboard-icon"
+                            class="menu-icon"> Dashboard</a>
+                </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link " href="#"> <i class="fa fa-user"></i>
-                            Users</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="#"> <img src="{{asset('assets/dashboard/img/status.png')}}" alt="dashboard-icon" class="menu-icon">
-                          Loan  Status</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="#"> <img src="{{asset('assets/dashboard/img/bx_link.png')}}" alt="dashboard-icon" class="menu-icon">
-                            Companies</a>
-                    </li>
-
-
-                    <li class="nav-item">
-                        <a class="nav-link " href="{{url('admin/myprofile')}}"> <img src="{{asset('assets/dashboard/img/profile.png')}}" alt="dashboard-icon" class="menu-icon">
-                            Meu Perfil</a>
-                    </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#"> <i class="fa fa-user"></i>
+                        Users</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#"> <img src="{{asset('assets/dashboard/img/status.png')}}"
+                                                        alt="dashboard-icon" class="menu-icon">
+                        Loan Status</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#"> <img src="{{asset('assets/dashboard/img/bx_link.png')}}"
+                                                        alt="dashboard-icon" class="menu-icon">
+                        Companies</a>
+                </li>
 
 
-                    <li class="nav-item">
-                        <a class="nav-link " href="{{url('logout')}}"> <img src="{{asset('assets/dashboard/img/history.png')}}" alt="dashboard-icon" class="menu-icon">
-                            Logout</a>
-                    </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="{{url('admin/myprofile')}}"> <img
+                            src="{{asset('assets/dashboard/img/profile.png')}}" alt="dashboard-icon" class="menu-icon">
+                        Meu Perfil</a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link " href="{{url('logout')}}"> <img
+                            src="{{asset('assets/dashboard/img/history.png')}}" alt="dashboard-icon" class="menu-icon">
+                        Logout</a>
+                </li>
 
             @endif
         </ul>
@@ -122,8 +138,8 @@
                     <div class="d-flex align-items-center">
                         <div class="menu-icon d-block d-lg-none" onClick="showNav()">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="37" height="27">
-                                <path fill="none" d="M0 0h24v24H0z" />
-                                <path fill="#fff" d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z" />
+                                <path fill="none" d="M0 0h24v24H0z"/>
+                                <path fill="#fff" d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"/>
                             </svg>
                         </div>
                         <div class="logo-side">
@@ -138,12 +154,13 @@
 
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="25"
                              height="30">
-                            <path fill="none" d="M0 0h24v24H0z" />
+                            <path fill="none" d="M0 0h24v24H0z"/>
                             <path fill="#fff"
-                                  d="M20 17h2v2H2v-2h2v-7a8 8 0 1 1 16 0v7zM9 21h6v2H9v-2z" />
+                                  d="M20 17h2v2H2v-2h2v-7a8 8 0 1 1 16 0v7zM9 21h6v2H9v-2z"/>
                         </svg>
-                        <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
-                             alt="user-img" class="user-img">
+                        <img
+                            src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
+                            alt="user-img" class="user-img">
                     </div>
                 </div>
             </div>
@@ -164,21 +181,18 @@
         crossorigin="anonymous"></script>
 
 
-
-
-
-
-
 </body>
 
 </html>
 <script>
-                                    var navbar = document.querySelector(".side-navbar").style;
-                                    function showNav(){
-                                        console.log(navbar);
-                                        navbar.left = 0 + "px";
-                                    }
-                                    function navbarHide(){
-                                        navbar.left = -216 + "px";
-                                    }
-                                </script>
+    var navbar = document.querySelector(".side-navbar").style;
+
+    function showNav() {
+        console.log(navbar);
+        navbar.left = 0 + "px";
+    }
+
+    function navbarHide() {
+        navbar.left = -216 + "px";
+    }
+</script>
