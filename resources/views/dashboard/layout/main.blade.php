@@ -130,7 +130,7 @@
                             <img src="{{asset('assets/dashboard/img/Logo.png')}}" alt="header-img" class="header-logo">
                         </div>
                     </div>
-                    
+
                 </div>
                 <div class="col-md-6 col-12 p-0">
                     <div
@@ -164,12 +164,13 @@
 
 
 
-                                
+
 
 
 </body>
 
 </html>
+
 <script>
                                     var navbar = document.querySelector(".side-navbar").style;
                                     function showNav(){
@@ -180,3 +181,4 @@
                                         navbar.left = -216 + "px";
                                     }
                                 </script>
+
