@@ -24,6 +24,7 @@
 
 <body>
 <div class="page-block ">
+
     <!-- respon -->
 
     <!-- Sidebar Start -->
@@ -34,6 +35,7 @@
                 <path fill="#fff" d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z" />
             </svg>
             <i class="icofont-ui-close d-block d-lg-none p-3" onclick={navbarHide()}></i>
+
         </div>
         <ul class="nav flex-column">
             @if(Auth::user()->role=='user')
@@ -111,7 +113,9 @@
                     </li>
 
             @endif
+
         </ul>
+
     </div>
     <!-- Siderbar End -->
     <main>
@@ -119,6 +123,7 @@
         <div class="header-bar">
             <div class="row m-0 w-100">
                 <div class="col-md-6 col-12 px-0 py-1">
+
                     <div class="d-flex align-items-center">
                         <div class="menu-icon d-block d-lg-none" onClick="showNav()">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="37" height="27">
@@ -130,6 +135,7 @@
                             <img src="{{asset('assets/dashboard/img/Logo.png')}}" alt="header-img" class="header-logo">
                         </div>
                     </div>
+
 
                 </div>
                 <div class="col-md-6 col-12 p-0">
@@ -189,5 +195,6 @@
                                         navbar.left = -216 + "px";
                                     }
                                 </script>
+
 
 

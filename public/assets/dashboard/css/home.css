@@ -60,6 +60,7 @@ main{
     z-index: 1;
     top: 0px;
     left: 0px;
+
     transition: 0.3s;
 }
 @media screen and (max-width:768px){
@@ -69,6 +70,7 @@ main{
         z-index: 500;
         top: 0px;
         left: -216px;
+
     }
 }
 .side-navbar .nav-item .nav-link{
@@ -138,6 +140,7 @@ main{
     position: relative;
     width: 216px;
 }
+
 @media screen and (max-width:768px) {
     .header-bar .menu-icon{
         height: 30px;
@@ -151,17 +154,20 @@ main{
         color: white;
     }
 }
+
 .menu-icon svg{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     left: 20px;
 }
+
 @media screen and (max-width:768px) {
     .menu-icon svg{
         left: 0px;
     }
 }
+
 .breadcrumb{
     background: #F6F6F6;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
@@ -252,12 +258,14 @@ main{
     border: 1px solid #ACACAC;
     padding: 30px 40px;
 }
+
 @media screen and (max-width:768px) {
     .page-section .upload-details{
         border: 1px solid #ACACAC;
         padding: 30px 12px;
     }
 }
+
 
 .page-section .upload-btn.active{
     box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.25);
@@ -697,6 +705,7 @@ main{
     border: none;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
 }
+
 @media screen and (max-width:425px){
     .copy-link button{
         width: 75px;
@@ -717,6 +726,7 @@ main{
         font-size: 20px !important;
     }
 }
+
 .affilate p{
     font-family: Roboto;
     font-size: 24px;
