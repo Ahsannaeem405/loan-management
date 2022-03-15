@@ -24,13 +24,16 @@
 
 <body>
 <div class="page-block ">
+    <!-- respon -->
+
     <!-- Sidebar Start -->
     <div class="side-navbar">
-        <div class="menu-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="37" height="27">
+        <div class="menu-icon text-right">
+            <svg class="d-none d-lg-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="37" height="27">
                 <path fill="none" d="M0 0h24v24H0z" />
                 <path fill="#fff" d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z" />
             </svg>
+            <i class="icofont-ui-close d-block d-lg-none p-3" onclick={navbarHide()}></i>
         </div>
         <ul class="nav flex-column">
             @if(Auth::user()->role=='user')
@@ -108,11 +111,7 @@
                     </li>
 
             @endif
-
-
-
         </ul>
-
     </div>
     <!-- Siderbar End -->
     <main>
@@ -120,9 +119,18 @@
         <div class="header-bar">
             <div class="row m-0 w-100">
                 <div class="col-md-6 col-12 px-0 py-1">
-                    <div class="logo-side">
-                        <img src="{{asset('assets/dashboard/img/Logo.png')}}" alt="header-img" class="header-logo">
+                    <div class="d-flex align-items-center">
+                        <div class="menu-icon d-block d-lg-none" onClick="showNav()">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="37" height="27">
+                                <path fill="none" d="M0 0h24v24H0z" />
+                                <path fill="#fff" d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z" />
+                            </svg>
+                        </div>
+                        <div class="logo-side">
+                            <img src="{{asset('assets/dashboard/img/Logo.png')}}" alt="header-img" class="header-logo">
+                        </div>
                     </div>
+
                 </div>
                 <div class="col-md-6 col-12 p-0">
                     <div
@@ -149,6 +157,7 @@
     </main>
 </div>
 
+
 <!-- Bootstrap js -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
@@ -162,3 +171,13 @@
 </body>
 
 </html>
+<script>
+                                    var navbar = document.querySelector(".side-navbar").style;
+                                    function showNav(){
+                                        console.log(navbar);
+                                        navbar.left = 0 + "px";
+                                    }
+                                    function navbarHide(){
+                                        navbar.left = -216 + "px";
+                                    }
+                                </script>
