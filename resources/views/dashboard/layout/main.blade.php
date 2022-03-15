@@ -174,7 +174,9 @@
 <script>
                                     var navbar = document.querySelector(".side-navbar").style;
                                     function showNav(){
+
                                         console.log(navbar);
+                                        console.log('ok');
                                         navbar.left = 0 + "px";
                                     }
                                     function navbarHide(){
