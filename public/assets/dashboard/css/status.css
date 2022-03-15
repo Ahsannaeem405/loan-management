@@ -1,0 +1,175 @@
+.status h5{
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #494949;
+}
+.status-table{
+    display: flex;
+    align-items: start;
+}
+.status-table .table-responsive{
+    flex: 1;
+}
+.equity .table-icons{
+    background-color: #579BFC;
+    width: 22px;
+    height: 22px;
+    color: white;
+    position: relative;
+    border-radius: 25px;
+    font-size: 18px;
+}
+.real-estate .table-icons{
+    background-color: #A25DDC;
+    width: 22px;
+    height: 22px;
+    color: white;
+    position: relative;
+    border-radius: 25px;
+    font-size: 18px;
+}
+.table-icons i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.status-table th{
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #626262;
+}
+.equity .table-heading{
+    font-family: Roboto;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: start;
+    color: #22AFFF;
+}
+.real-estate .table-heading{
+    font-family: Roboto;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: start;
+    color: #A25DDC;
+}
+
+.status-table tr{
+    background-color:  #F5F6F8;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+.status-table thead tr{
+    background-color: white;
+    border-bottom: none;
+}
+.status-table tbody tr td{
+    position: relative;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #939393;
+    vertical-align: middle;
+}
+.equity tbody tr td:first-child:before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color:  #579BFC;
+    content: "";
+    height: 100%;
+    width: 10px;
+    border-bottom: 1px solid #fff;
+}
+.real-estate tbody tr td:first-child:before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #A25DDC;
+    content: "";
+    height: 100%;
+    width: 10px;
+    border-bottom: 1px solid #fff;
+}
+.status-table tbody tr:last-child td:first-child:before{
+    border-bottom: none;
+}
+.status-table .marked{
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    border-radius: 25px;
+    position: relative;
+    color: #C8C8C8;    ;
+    border: 3px solid #C8C8C8;    ;
+    box-sizing: border-box;
+        font-size: 16px;
+        padding: 5px;
+        
+}
+.status-table .marked i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px;
+}
+.status-table .msg{
+        position: relative;
+}
+.status-table .msg .msg-no{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: gray;
+    font-size: 10px;
+    color: #fff;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 55%;
+    left: 50%;
+}
+.status-table .loan-status{
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: white;
+    padding: 15px;
+}
+.status-table .loan-status.collect{
+    background: #FDAB3D;
+}
+.status-table .loan-status.approved{
+    background: #9CD326;
+}
+.status-table .loan-status.internal-due{
+    background: #66CCFF;
+}
+.status-table .loan-status.analysis{
+    background: #FF642E;
+}

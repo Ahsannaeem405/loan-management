@@ -1,0 +1,23 @@
+.report-card{
+    gap: 18px;
+}
+.report-card img{
+    width: 60px;
+}
+.report-card h6{
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: center;
+    color:  #494949;
+    margin-bottom: 0px;
+}
+.report-card svg{
+    background-color: #22AFFF;
+    color: white;
+    border-radius: 25px;
+    padding: 4px;
+}

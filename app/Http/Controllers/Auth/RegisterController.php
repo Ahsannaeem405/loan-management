@@ -29,7 +29,19 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected function redirectTo()
+    {
+        if (auth()->user()->role == 'user') {
+            return '/user/index';
+
+        } elseif (auth()->user()->role == 'admin') {
+            return '/admin/index';
+        }
+
+
+        return redirect()->back()->withError('whoops! You are not authorized to visit this link.');
+
+    }
 
     /**
      * Create a new controller instance.
@@ -68,6 +80,7 @@ class RegisterController extends Controller
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
+            'role' => 'user',
             'password' => Hash::make($data['password']),
         ]);
     }
