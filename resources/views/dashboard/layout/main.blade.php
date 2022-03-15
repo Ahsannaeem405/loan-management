@@ -157,6 +157,7 @@
     </main>
 </div>
 
+
 <!-- Bootstrap js -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
@@ -167,20 +168,23 @@
 
 
 
+
 </body>
 
 </html>
+
 
 <script>
                                     var navbar = document.querySelector(".side-navbar").style;
                                     function showNav(){
 
                                         console.log(navbar);
-                                        console.log('ok');
+                                        console.log('okdone');
                                         navbar.left = 0 + "px";
                                     }
                                     function navbarHide(){
                                         navbar.left = -216 + "px";
                                     }
                                 </script>
+
 
