@@ -60,15 +60,10 @@ main{
     z-index: 1;
     top: 0px;
     left: 0px;
-    transition: 0.3s;
 }
-@media screen and (max-width:768px){
+@media screen and (max-width:767px){
     .side-navbar{
-        position: fixed;
-        width: 216px;
-        z-index: 500;
-        top: 0px;
-        left: -216px;
+        top: 115px;
     }
 }
 .side-navbar .nav-item .nav-link{
@@ -138,29 +133,11 @@ main{
     position: relative;
     width: 216px;
 }
-@media screen and (max-width:768px) {
-    .header-bar .menu-icon{
-        height: 30px;
-        width: 100%;
-        text-align: right;
-        color: white;
-    }
-    .menu-icon {
-        height: 114px;
-        text-align: right;
-        color: white;
-    }
-}
 .menu-icon svg{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     left: 20px;
-}
-@media screen and (max-width:768px) {
-    .menu-icon svg{
-        left: 0px;
-    }
 }
 .breadcrumb{
     background: #F6F6F6;
@@ -251,12 +228,6 @@ main{
 .page-section .upload-details{
     border: 1px solid #ACACAC;
     padding: 30px 40px;
-}
-@media screen and (max-width:768px) {
-    .page-section .upload-details{
-        border: 1px solid #ACACAC;
-        padding: 30px 12px;
-    }
 }
 
 .page-section .upload-btn.active{
@@ -696,26 +667,6 @@ main{
     color: white;
     border: none;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
-}
-@media screen and (max-width:425px){
-    .copy-link button{
-        width: 75px;
-        height: 35px;
-    }
-    .affilate .input-group {
-        height: 50px;
-        font-size: 12px;
-    }
-    .affilate .input-group input {
-        font-size: 10px;
-    }
-    .affilate p{
-       
-        font-size: 16px !important;
-    }
-    .affilate p span{
-        font-size: 20px !important;
-    }
 }
 .affilate p{
     font-family: Roboto;
