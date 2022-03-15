@@ -28,12 +28,12 @@
 
     <!-- Sidebar Start -->
     <div class="side-navbar">
-        <div class="menu-icon">
+        <div class="menu-icon text-right">
             <svg class="d-none d-lg-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="37" height="27">
                 <path fill="none" d="M0 0h24v24H0z" />
                 <path fill="#fff" d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z" />
             </svg>
-            <i class="icofont-ui-close d-block d-lg-none p-3 float-right" onclick={navbarHide()}></i>
+            <i class="icofont-ui-close d-block d-lg-none p-3" onclick={navbarHide()}></i>
         </div>
         <ul class="nav flex-column">
             @if(Auth::user()->role=='user')
