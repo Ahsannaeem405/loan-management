@@ -18,11 +18,11 @@
                 </div>
             </div>
             <div class="row justify-content-center mt-4">
-                <div class="col-6">
+                <div class="col-xl-6 col-lg-9">
                     <div class="affilate">
                         <div class="input-group mb-3">
-                            <div class="input-group-prepend px-3 align-items-center d-flex ">
-                                <img src="./img/bx_link.png " alt="">
+                            <div class="input-group-prepend px-mg-3 px-1 align-items-center d-flex ">
+                                <img src="{{asset('assets/dashboard/img/bx_link.png')}}" alt="">
                             </div>
                             <input type="text" class="form-control" value="http://acredite.com.br/afiliados/86asda54as">
                             <div class="copy-link">
@@ -43,5 +43,5 @@
     </section>
     <!-- Dashboard End -->
 
-
+                                
 @endsection
