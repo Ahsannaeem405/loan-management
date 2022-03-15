@@ -181,6 +181,7 @@
                                         console.log(navbar);
 
                                         console.log('reh');
+                                        console.log('suf');
 
                                         navbar.left = 0 + "px";
                                     }
