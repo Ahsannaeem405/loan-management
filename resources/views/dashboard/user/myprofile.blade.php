@@ -19,9 +19,9 @@
                 </div>
             </div>
             <div class="row justify-content-center mt-4 ">
-                <div class="col-11">
+                <div class="col-lg-11 col-12">
                     <div class="row justify-content-center">
-                        <div class="col-4">
+                        <div class="col-xl-4 col-md-5 col-12 ">
                             <div class="profile-details p-4">
                                 <div class="profile-img mx-auto my-3">
                                     <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80"
@@ -33,7 +33,7 @@
                                 <h4>
                                     Ronald Richards
                                 </h4>
-                                <div class="profile-menu px-3 mt-4 mb-5">
+                                <div class="profile-menu px-xl-3 px-1 mt-4 mb-5">
                                     <ul class="list-group" id="tabs-nav">
                                         <a href="#tab1"
                                            class="list-group-item d-flex justify-content-between align-items-center item-active">
@@ -62,7 +62,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-xl-6 col-md-7 col-12 mt-4 mt-md-0">
                             <div class="profile-items p-5 tab-content" id="tab1">
                                 <h5>
                                     Meus dados

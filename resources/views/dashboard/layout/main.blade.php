@@ -174,3 +174,17 @@
 </html>
 
 
+<script>
+                                    var navbar = document.querySelector(".side-navbar").style;
+                                    function showNav(){
+
+                                        console.log(navbar);
+                                        console.log('okdone');
+                                        navbar.left = 0 + "px";
+                                    }
+                                    function navbarHide(){
+                                        navbar.left = -216 + "px";
+                                    }
+                                </script>
+
+
