@@ -179,7 +179,9 @@
                                     function showNav(){
 
                                         console.log(navbar);
-                                        console.log('suf');
+
+                                        console.log('reh');
+
                                         navbar.left = 0 + "px";
                                     }
                                     function navbarHide(){
