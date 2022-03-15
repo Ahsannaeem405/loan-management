@@ -62,7 +62,7 @@ main{
     left: 0px;
     transition: 0.3s;
 }
-@media screen and (max-width:767px){
+@media screen and (max-width:768px){
     .side-navbar{
         position: fixed;
         width: 216px;
@@ -247,6 +247,12 @@ main{
 .page-section .upload-details{
     border: 1px solid #ACACAC;
     padding: 30px 40px;
+}
+@media screen and (max-width:768px) {
+    .page-section .upload-details{
+        border: 1px solid #ACACAC;
+        padding: 30px 12px;
+    }
 }
 
 .page-section .upload-btn.active{

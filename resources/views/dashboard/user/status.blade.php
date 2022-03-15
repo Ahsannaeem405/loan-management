@@ -20,13 +20,13 @@
                 <div class="col-11 p-0 my-4">
                     <div class="status">
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-lg-6 col-12">
                                 <h5>
                                     Selecione o tipo do empréstimo
                                 </h5>
 
                             </div>
-                            <div class="col-6">
+                            <div class="col-lg-6 col-12">
                                 <h5>
                                     Selecione o tipo do empréstimo
                                 </h5>
@@ -213,6 +213,7 @@
                 </div>
             </div>
         </div>
+</div>
     </section>
     <!-- page body End -->
 @endsection
