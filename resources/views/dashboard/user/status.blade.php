@@ -1,5 +1,7 @@
 @extends('dashboard.layout.main')
-
+@section('loan')
+    active
+@endsection
 @section('content')
 
 

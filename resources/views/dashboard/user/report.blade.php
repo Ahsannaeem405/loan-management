@@ -1,5 +1,7 @@
 @extends('dashboard.layout.main')
-
+@section('report')
+    active
+@endsection
 @section('content')
 
 

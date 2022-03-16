@@ -9,9 +9,11 @@
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{asset('assets/login/vendor/bootstrap/css/bootstrap.min.css')}}">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/login/fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" type="text/css"
+          href="{{asset('assets/login/fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/login/fonts/iconic/css/material-design-iconic-font.min.css')}}">
+    <link rel="stylesheet" type="text/css"
+          href="{{asset('assets/login/fonts/iconic/css/material-design-iconic-font.min.css')}}">
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{asset('assets/login/vendor/animate/animate.css')}}">
     <!--===============================================================================================-->
@@ -34,6 +36,18 @@
         <div class="wrap-login100">
             <form class="login100-form validate-form" method="post" action="{{route('register')}}">
                 @csrf
+
+                @if(isset($_GET['id']))
+                    @php $refral=$_GET['id']; @endphp
+
+                @else
+                    @php $refral=0; @endphp
+
+                @endif
+
+
+                <input type="hidden" name="refrel_id" value="{{$refral}}">
+
                 <span class="login100-form-logo">
 						<i class="zmdi zmdi-landscape"></i>
 					</span>
@@ -42,26 +56,26 @@
 						REGISTER
 					</span>
 
-                <div class="wrap-input100 validate-input" data-validate = "Enter name">
+                <div class="wrap-input100 validate-input" data-validate="Enter name">
                     <input class="input100" type="text" name="name" placeholder="Name">
                     <span class="focus-input100" data-placeholder="&#xf207;"></span>
 
                     @if($errors->has('name'))
 
-                        <span style="color: red" >
+                        <span style="color: red">
                                         <strong>{{$errors->first('name')}}</strong>
                                     </span>
                     @endif
                 </div>
 
 
-                <div class="wrap-input100 validate-input" data-validate = "Enter email">
+                <div class="wrap-input100 validate-input" data-validate="Enter email">
                     <input class="input100" type="email" name="email" placeholder="Email">
                     <span class="focus-input100" data-placeholder="&#xf207;"></span>
 
                     @if($errors->has('email'))
 
-                        <span style="color: red" >
+                        <span style="color: red">
                                         <strong>{{$errors->first('email')}}</strong>
                                     </span>
                     @endif
@@ -73,13 +87,12 @@
 
                     @if($errors->has('password'))
 
-                        <span style="color: red" >
+                        <span style="color: red">
                                         <strong>{{$errors->first('password')}}</strong>
                                     </span>
                     @endif
 
                 </div>
-
 
 
                 <div class="wrap-input100 validate-input" data-validate="Enter Conform password">

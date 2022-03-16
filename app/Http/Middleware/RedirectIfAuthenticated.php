@@ -23,7 +23,16 @@ class RedirectIfAuthenticated
 
         foreach ($guards as $guard) {
             if (Auth::guard($guard)->check()) {
-                return redirect('/');
+
+                if (auth()->user()->role == 'user') {
+                    return redirect('/user/index');
+
+                } elseif (auth()->user()->role == 'admin') {
+                    return redirect('/admin/index');
+                }
+
+
+                return redirect()->back()->withError('whoops! You are not authorized to visit this link.');
             }
         }
 

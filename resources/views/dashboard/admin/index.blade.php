@@ -1,4 +1,7 @@
 @extends('dashboard.layout.main')
+@section('dashboard')
+    active
+@endsection
 
 @section('content')
 
