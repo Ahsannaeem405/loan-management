@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\loan;
+use App\Models\loanDocument;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -15,7 +17,35 @@ class UserController extends Controller
     public function upload()
     {
 
-        return view('dashboard.user.upload');
+        $i=$j=1;
+        $equity=loan::where('user_id',\Auth::user()->id)->where('type','Home equity')->with('equity')->first();
+        $estate=loan::where('user_id',\Auth::user()->id)->where('type','Real estate financing')->with('estate')->first();
+
+
+        return view('dashboard.user.upload',compact('equity','estate','i','j'));
+    }
+    public function uploadLoan(Request $request)
+    {
+        $loan=loan::firstOrCreate(
+            ['user_id'=> \Auth::user()->id, 'type'=>$request->type],
+
+        );
+
+        if ($request->hasfile('file')) {
+            $file = $request->file('file');
+            $extension = $file->getClientOriginalExtension(); // getting image extension
+            $filename = $file->getClientOriginalName();
+            $file->move('assets/dashboard/document/', $filename);
+
+            $documet=new loanDocument();
+            $documet->loan_id=$loan->id;
+            $documet->file=$filename;
+            $documet->save();
+
+        }
+        return back()->with('success','Document uploaded successfully');
+
+
     }
     public function status()
     {

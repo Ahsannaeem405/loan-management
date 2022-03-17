@@ -28,6 +28,12 @@ Route::prefix('admin')->middleware(['auth','admin'])->group(function () {
     Route::get('/user',[\App\Http\Controllers\AdminController::class,'user']);
     Route::get('/user/delete/{id}',[\App\Http\Controllers\AdminController::class,'userDelete']);
 
+    //laon
+    Route::get('/loan',[\App\Http\Controllers\AdminController::class,'loan']);
+    Route::get('/loan/delete/{id}',[\App\Http\Controllers\AdminController::class,'loanDelete']);
+    Route::get('/loan/detail/{id}',[\App\Http\Controllers\AdminController::class,'loanDetail']);
+
+
     //companies
     Route::get('/companies',[\App\Http\Controllers\AdminController::class,'companies']);
     Route::post('/add/company',[\App\Http\Controllers\AdminController::class,'Addcompanies']);
@@ -44,7 +50,11 @@ Route::prefix('admin')->middleware(['auth','admin'])->group(function () {
 
 Route::prefix('user')->middleware(['auth','user'])->group(function () {
     Route::get('/index',[\App\Http\Controllers\UserController::class,'dashboard']);
+
+    //loan
     Route::get('/upload',[\App\Http\Controllers\UserController::class,'upload']);
+    Route::post('/upload/loan',[\App\Http\Controllers\UserController::class,'uploadLoan']);
+
     Route::get('/status',[\App\Http\Controllers\UserController::class,'status']);
     Route::get('/report',[\App\Http\Controllers\UserController::class,'report']);
 

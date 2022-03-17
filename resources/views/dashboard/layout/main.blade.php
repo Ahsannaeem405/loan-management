@@ -116,7 +116,7 @@
                     </li>
 
                 <li class="nav-item">
-                    <a class="nav-link @yield('loan')" href="#"> <img src="{{asset('assets/dashboard/img/status.png')}}"
+                    <a class="nav-link @yield('loan')" href="{{url('admin/loan')}}"> <img src="{{asset('assets/dashboard/img/status.png')}}"
                                                         alt="dashboard-icon" class="menu-icon">
                         Loan Status</a>
                 </li>
