@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\loan;
+use App\Models\loanApplyCompany;
 use App\Models\loanDocument;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -47,10 +49,21 @@ class UserController extends Controller
 
 
     }
+
+    public function loanDocument($id)
+    {
+
+        $loanadd=loanApplyCompany::with('document')->find($id);
+
+        return view('dashboard.user.loanDocument', compact('loanadd'));
+    }
     public function status()
     {
 
-        return view('dashboard.user.status');
+$equity=loanApplyCompany::where('user_id',\Auth::user()->id)->where('category','Home equity')->get();
+$estate=loanApplyCompany::where('user_id',\Auth::user()->id)->where('category','Real estate financing')->get();
+
+        return view('dashboard.user.status',compact('estate','equity'));
     }
 
     public function report()

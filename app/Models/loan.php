@@ -38,4 +38,9 @@ class loan extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function applyCom()
+    {
+        return $this->hasMany(loanApplyCompany::class);
+    }
 }

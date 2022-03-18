@@ -4,7 +4,13 @@
 @endsection
 @section('content')
 
+    <style>
 
+
+
+
+
+    </style>
 
 
 
@@ -25,7 +31,6 @@
 
 
             <div class="row">
-
 
 
                 <div class="col-lg-12">
@@ -51,9 +56,11 @@
                                 <td>{{$loan->type}}</td>
 
                                 <td>
-                                    <a href="{{url('admin/loan/delete/'.$loan->id.'')}}"> <i style="color: red" class="fa fa-trash"></i></a>
+                                    <a href="{{url('admin/loan/delete/'.$loan->id.'')}}"> <i style="color: red"
+                                                                                             class="fa fa-trash"></i></a>
 
-                                    <a href="{{url('admin/loan/detail/'.$loan->id.'')}}"> <i style="color: blueviolet" class="fa fa-eye"></i></a>
+                                    <a href="{{url('admin/loan/detail/'.$loan->id.'')}}"> <i style="color: blueviolet"
+                                                                                             class="fa fa-eye"></i></a>
                                 </td>
                             </tr>
 

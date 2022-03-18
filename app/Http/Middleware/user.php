@@ -20,17 +20,7 @@ class user
         if(\Auth::user()->role=='user')
         {
 
-            $user=\App\Models\User::find(\Auth::user()->id);
-            $days=$user->register;
-            $exp=$user->created_at->addDays($days);
-         if($exp>=Carbon::now())
-         {
 
-         }
-         else{
-             $user->status=0;
-             $user->update();
-         }
 
 
             return $next($request);

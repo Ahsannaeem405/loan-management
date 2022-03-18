@@ -32,6 +32,15 @@ Route::prefix('admin')->middleware(['auth','admin'])->group(function () {
     Route::get('/loan',[\App\Http\Controllers\AdminController::class,'loan']);
     Route::get('/loan/delete/{id}',[\App\Http\Controllers\AdminController::class,'loanDelete']);
     Route::get('/loan/detail/{id}',[\App\Http\Controllers\AdminController::class,'loanDetail']);
+    Route::post('/addCompamy/loan/{id}',[\App\Http\Controllers\AdminController::class,'CompanyAddLoan']);
+
+    Route::post('status/loan',[\App\Http\Controllers\AdminController::class,'statusLoan']);
+
+//comment in loan
+    Route::get('comment/{id}',[\App\Http\Controllers\AdminController::class,'viewComment']);
+    Route::post('comment/send/{id}',[\App\Http\Controllers\AdminController::class,'sendComment']);
+
+    Route::get('loan/doc/{id}',[\App\Http\Controllers\UserController::class,'loanDocument']);
 
 
     //companies
@@ -55,14 +64,26 @@ Route::prefix('user')->middleware(['auth','user'])->group(function () {
     Route::get('/upload',[\App\Http\Controllers\UserController::class,'upload']);
     Route::post('/upload/loan',[\App\Http\Controllers\UserController::class,'uploadLoan']);
 
+
+    //status
     Route::get('/status',[\App\Http\Controllers\UserController::class,'status']);
+
+   //report
     Route::get('/report',[\App\Http\Controllers\UserController::class,'report']);
 
-
+//history
     Route::get('/history',[\App\Http\Controllers\UserController::class,'history']);
+
+    //comment
+    Route::get('comment/{id}',[\App\Http\Controllers\AdminController::class,'viewComment']);
+    Route::post('comment/send/{id}',[\App\Http\Controllers\AdminController::class,'sendComment']);
+    Route::post('document/send/{id}',[\App\Http\Controllers\AdminController::class,'sendDocument']);
+    Route::get('loan/doc/{id}',[\App\Http\Controllers\UserController::class,'loanDocument']);
+
 
     //refrel
     Route::get('/refrel',[\App\Http\Controllers\UserController::class,'refrel']);
+
     //profile
     Route::get('/myprofile',[\App\Http\Controllers\UserController::class,'myprofile']);
     Route::post('/profile/update',[\App\Http\Controllers\AdminController::class,'myprofileUpdate']);

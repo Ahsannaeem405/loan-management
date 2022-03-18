@@ -18,8 +18,8 @@
                     </nav>
                 </div>
             </div>
-            <div class="row justify-content-center ">
-                <div class="col-11 p-0 my-4">
+            <div class="row justify-content-center w-100">
+                <div class="col-12 p-0 my-4">
                     <div class="status">
                         <div class="row">
 
@@ -49,9 +49,8 @@
                                         <table class="table table-borderless">
                                             <thead>
                                             <tr>
-                                                <th class="table-heading">Home equity</th>
-                                                <th></th>
-                                                <th></th>
+                                                <th class="table-heading" colspan="3">Home equity</th>
+
                                                 <th>Modalidade</th>
                                                 <th>Tipo</th>
                                                 <th>Valor de Crédito</th>
@@ -61,66 +60,45 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <tr>
-                                                <td class="px-3">HAUNT INCORPORADORA & DESIGN LTDA</td>
-                                                <td class=" mx-auto">
-                                                    <div class="marked">
-                                                        <i class="icofont-tick-mark"></i>
-                                                    </div>
-                                                </td>
-                                                <td class="msg">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path  fill="gray" d="M7.291 20.824L2 22l1.176-5.291A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.956 9.956 0 0 1-4.709-1.176zm.29-2.113l.653.35A7.955 7.955 0 0 0 12 20a8 8 0 1 0-8-8c0 1.334.325 2.618.94 3.766l.349.653-.655 2.947 2.947-.655z"/></svg>
-                                                    <div class="msg-no">
-                                                        5
-                                                    </div>
-                                                </td>
-                                                <td>Home Equity</td>
-                                                <td>PJ</td>
-                                                <td>R$ 750.000</td>
-                                                <td class="loan-status collect">Coleta de docume...</td>
-                                                <td>8</td>
+                                            @foreach($equity as $equity)
+                                                <tr>
+                                                    <td class="px-3">{{$equity->name}}</td>
+                                                    <td class=" mx-auto">
+                                                        <div class="marked">
+                                                            <i class="icofont-tick-mark"></i>
+                                                        </div>
+                                                    </td>
+                                                    <td class="msg">
+                                                        <a href="{{url("user/comment/$equity->id")}}">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                                 width="24" height="24">
+                                                                <path fill="none" d="M0 0h24v24H0z"/>
+                                                                <path fill="gray"
+                                                                      d="M7.291 20.824L2 22l1.176-5.291A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.956 9.956 0 0 1-4.709-1.176zm.29-2.113l.653.35A7.955 7.955 0 0 0 12 20a8 8 0 1 0-8-8c0 1.334.325 2.618.94 3.766l.349.653-.655 2.947 2.947-.655z"/>
+                                                            </svg>
+                                                            <div class="msg-no">
+                                                                {{count($equity->comment)}}
+                                                            </div>
+                                                        </a>
+                                                    </td>
+                                                    <td>{{$equity->category}}</td>
+                                                    <td>{{$equity->type}}</td>
+                                                    <td>{{$equity->price}}</td>
+                                                    <td class="loan-status collect">{{$equity->status}}</td>
+                                                    <td class="msg">
+                                                        <a href="{{url('user/loan/doc/'.$equity->id.'')}}">   <i class="fa fa-dedent"></i>
 
-                                            </tr>
-                                            <tr>
-                                                <td class="px-3">DARRIGO INCORPORADORA E SERVICOS LTDA</td>
-                                                <td class=" mx-auto">
-                                                    <div class="marked">
-                                                        <i class="icofont-tick-mark"></i>
-                                                    </div>
-                                                </td>
-                                                <td class="msg">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path  fill="gray" d="M7.291 20.824L2 22l1.176-5.291A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.956 9.956 0 0 1-4.709-1.176zm.29-2.113l.653.35A7.955 7.955 0 0 0 12 20a8 8 0 1 0-8-8c0 1.334.325 2.618.94 3.766l.349.653-.655 2.947 2.947-.655z"/></svg>
-                                                    <div class="msg-no">
-                                                        5
-                                                    </div>
-                                                </td>
-                                                <td>Home Equity</td>
-                                                <td>PJ</td>
-                                                <td>R$ 1.750.000</td>
-                                                <td class="loan-status approved">PRÉ-APROVADO</td>
-                                                <td>6</td>
+                                                            <div class="msg-no">
+                                                                {{count($equity->document)}}
+                                                            </div>
+                                                        </a>
+                                                    </td>
 
-                                            </tr>
-                                            <tr>
-                                                <td class="px-3">FOCO - INTERMEDIAÇÃO DE NEGÓCIOS</td>
-                                                <td class=" mx-auto">
-                                                    <div class="marked">
-                                                        <i class="icofont-tick-mark"></i>
-                                                    </div>
-                                                </td>
-                                                <td class="msg">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path  fill="gray" d="M7.291 20.824L2 22l1.176-5.291A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.956 9.956 0 0 1-4.709-1.176zm.29-2.113l.653.35A7.955 7.955 0 0 0 12 20a8 8 0 1 0-8-8c0 1.334.325 2.618.94 3.766l.349.653-.655 2.947 2.947-.655z"/></svg>
-                                                    <div class="msg-no">
-                                                        5
-                                                    </div>
-                                                </td>
-                                                <td>Home Equity</td>
-                                                <td>PJ</td>
-                                                <td>R$ 800.000</td>
-                                                <td class="loan-status collect">Coleta de docume...</td>
-                                                <td>8</td>
+                                                </tr>
 
-                                            </tr>
+                                            @endforeach
+
+
                                             </tbody>
                                         </table>
                                     </div>
@@ -137,9 +115,9 @@
                                         <table class="table table-borderless">
                                             <thead>
                                             <tr>
-                                                <th class="table-heading">Financiamento Imobiliário</th>
-                                                <th></th>
-                                                <th></th>
+                                                <th class="table-heading" colspan="3">Financiamento Imobiliário</th>
+
+
                                                 <th>Modalidade</th>
                                                 <th>Tipo</th>
                                                 <th>Valor de Crédito</th>
@@ -149,66 +127,43 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <tr>
-                                                <td class="px-3">HAUNT INCORPORADORA & DESIGN LTDA</td>
-                                                <td class=" mx-auto">
-                                                    <div class="marked">
-                                                        <i class="icofont-tick-mark"></i>
-                                                    </div>
-                                                </td>
-                                                <td class="msg">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path  fill="gray" d="M7.291 20.824L2 22l1.176-5.291A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.956 9.956 0 0 1-4.709-1.176zm.29-2.113l.653.35A7.955 7.955 0 0 0 12 20a8 8 0 1 0-8-8c0 1.334.325 2.618.94 3.766l.349.653-.655 2.947 2.947-.655z"/></svg>
-                                                    <div class="msg-no">
-                                                        5
-                                                    </div>
-                                                </td>
-                                                <td>Home Equity</td>
-                                                <td>PJ</td>
-                                                <td>R$ 750.000</td>
-                                                <td class="loan-status internal-due">Diligência Interna</td>
-                                                <td>8</td>
+                                            @foreach($estate as $estate)
+                                                <tr>
+                                                    <td class="px-3">{{$estate->name}}</td>
+                                                    <td class=" mx-auto">
+                                                        <div class="marked">
+                                                            <i class="icofont-tick-mark"></i>
+                                                        </div>
+                                                    </td>
+                                                    <td class="msg">
+                                                        <a href="{{url("user/comment/$estate->id")}}">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                                 width="24" height="24">
+                                                                <path fill="none" d="M0 0h24v24H0z"/>
+                                                                <path fill="gray"
+                                                                      d="M7.291 20.824L2 22l1.176-5.291A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.956 9.956 0 0 1-4.709-1.176zm.29-2.113l.653.35A7.955 7.955 0 0 0 12 20a8 8 0 1 0-8-8c0 1.334.325 2.618.94 3.766l.349.653-.655 2.947 2.947-.655z"/>
+                                                            </svg>
+                                                            <div class="msg-no">
+                                                                {{count($estate->comment)}}
+                                                            </div>
+                                                        </a>
+                                                    </td>
+                                                    <td>{{$estate->category}}</td>
+                                                    <td>{{$estate->type}}</td>
+                                                    <td>{{$estate->price}}</td>
+                                                    <td class="loan-status collect">{{$estate->status}}</td>
+                                                    <td class="msg">
+                                                        <a href="{{url('user/loan/doc/'.$estate->id.'')}}">   <i class="fa fa-dedent"></i>
 
-                                            </tr>
-                                            <tr>
-                                                <td class="px-3">DARRIGO INCORPORADORA E SERVICOS LTDA</td>
-                                                <td class=" mx-auto">
-                                                    <div class="marked">
-                                                        <i class="icofont-tick-mark"></i>
-                                                    </div>
-                                                </td>
-                                                <td class="msg">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path  fill="gray" d="M7.291 20.824L2 22l1.176-5.291A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.956 9.956 0 0 1-4.709-1.176zm.29-2.113l.653.35A7.955 7.955 0 0 0 12 20a8 8 0 1 0-8-8c0 1.334.325 2.618.94 3.766l.349.653-.655 2.947 2.947-.655z"/></svg>
-                                                    <div class="msg-no">
-                                                        5
-                                                    </div>
-                                                </td>
-                                                <td>Home Equity</td>
-                                                <td>PJ</td>
-                                                <td>R$ 1.750.000</td>
-                                                <td class="loan-status analysis">Análise de fundo</td>
-                                                <td>6</td>
+                                                            <div class="msg-no">
+                                                                {{count($estate->document)}}
+                                                            </div>
+                                                        </a>
+                                                    </td>
 
-                                            </tr>
-                                            <tr>
-                                                <td class="px-3">FOCO - INTERMEDIAÇÃO DE NEGÓCIOS</td>
-                                                <td class=" mx-auto">
-                                                    <div class="marked">
-                                                        <i class="icofont-tick-mark"></i>
-                                                    </div>
-                                                </td>
-                                                <td class="msg">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path  fill="gray" d="M7.291 20.824L2 22l1.176-5.291A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.956 9.956 0 0 1-4.709-1.176zm.29-2.113l.653.35A7.955 7.955 0 0 0 12 20a8 8 0 1 0-8-8c0 1.334.325 2.618.94 3.766l.349.653-.655 2.947 2.947-.655z"/></svg>
-                                                    <div class="msg-no">
-                                                        5
-                                                    </div>
-                                                </td>
-                                                <td>Home Equity</td>
-                                                <td>PJ</td>
-                                                <td>R$ 800.000</td>
-                                                <td class="loan-status analysis">Análise de fundo</td>
-                                                <td>8</td>
+                                                </tr>
 
-                                            </tr>
+                                            @endforeach
                                             </tbody>
                                         </table>
                                     </div>
@@ -220,7 +175,7 @@
             </div>
         </div>
 
-</div>
+        </div>
 
     </section>
     <!-- page body End -->

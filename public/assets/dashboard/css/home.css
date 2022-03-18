@@ -719,7 +719,7 @@ main{
         font-size: 10px;
     }
     .affilate p{
-       
+
         font-size: 16px !important;
     }
     .affilate p span{
@@ -746,3 +746,10 @@ main{
     text-align: center;
 }
 
+
+#table_id  {
+    background-color: #f6f3f3 !important;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
