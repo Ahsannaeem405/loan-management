@@ -156,7 +156,7 @@ class AdminController extends Controller
         $loanadd=loanApplyCompany::with('comment')->find($id);
       //  dd($loanadd);
 
-return view('dashboard.admin.comment',compact('loanadd'));
+return view('dashboard.common.comment',compact('loanadd'));
     }
 
     public function sendComment($id,Request $request)

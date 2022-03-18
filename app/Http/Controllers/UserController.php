@@ -55,7 +55,7 @@ class UserController extends Controller
 
         $loanadd=loanApplyCompany::with('document')->find($id);
 
-        return view('dashboard.user.loanDocument', compact('loanadd'));
+        return view('dashboard.common.loanDocument', compact('loanadd'));
     }
     public function status()
     {
