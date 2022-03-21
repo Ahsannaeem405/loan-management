@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Events\notification;
 use App\Events\sendMessage;
+use App\Models\companies;
 use App\Models\loan;
 use App\Models\loanApplyCompany;
 use App\Models\loanDocument;
@@ -99,6 +100,20 @@ $refrel=User::where('refrel_id',\Auth::user()->id)->get();
 
     public function history()
     {
-        return view('dashboard.user.history');
+
+
+        $equity=loanApplyCompany::where('category','Home equity')->get()->count();
+        $estate=loanApplyCompany::where('category','Real estate financing')->get()->count();
+
+        $pending=loanApplyCompany::where('user_id',Auth::user()->id)->where('status',"Pending")->get()->count();
+        $unfit=loanApplyCompany::where('user_id',Auth::user()->id)->where('status',"Unfit Loan")->get()->count();
+        $dpending=loanApplyCompany::where('user_id',Auth::user()->id)->where('status',"Documentation Pending")->get()->count();
+        $analysis=loanApplyCompany::where('user_id',Auth::user()->id)->where('status',"Loan under Analysis")->get()->count();
+        $resolution=loanApplyCompany::where('user_id',Auth::user()->id)->where('status',"Pending Resolution")->get()->count();
+        $finished=loanApplyCompany::where('user_id',Auth::user()->id)->where('status',"Finished")->get()->count();
+
+
+        return view('dashboard.common.history',compact('equity','estate','pending','unfit','dpending','analysis','resolution','finished'));
     }
+
 }

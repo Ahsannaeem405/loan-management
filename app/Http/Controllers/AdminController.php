@@ -11,6 +11,7 @@ use App\Models\loanCompanyDocument;
 use App\Models\loanDocument;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Testing\Fluent\Concerns\Has;
 
 class AdminController extends Controller
@@ -281,11 +282,28 @@ return view('dashboard.common.comment',compact('loanadd'));
     }
 
 
-    public
-    function CompanyDelete($id)
+    public function CompanyDelete($id)
     {
         $users = companies::find($id)->delete();
         return back()->with('success', 'company deleted successfully');
+    }
+
+    public function history()
+    {
+
+
+        $equity=loanApplyCompany::where('category','Home equity')->get()->count();
+        $estate=loanApplyCompany::where('category','Real estate financing')->get()->count();
+
+        $pending=loanApplyCompany::where('status',"Pending")->get()->count();
+        $unfit=loanApplyCompany::where('status',"Unfit Loan")->get()->count();
+        $dpending=loanApplyCompany::where('status',"Documentation Pending")->get()->count();
+        $analysis=loanApplyCompany::where('status',"Loan under Analysis")->get()->count();
+        $resolution=loanApplyCompany::where('status',"Pending Resolution")->get()->count();
+        $finished=loanApplyCompany::where('status',"Finished")->get()->count();
+
+
+        return view('dashboard.common.history',compact('equity','estate','pending','unfit','dpending','analysis','resolution','finished'));
     }
 
 

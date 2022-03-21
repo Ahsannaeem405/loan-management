@@ -153,6 +153,11 @@
                         Meu Perfil</a>
                 </li>
 
+                    <li class="nav-item">
+                        <a class="nav-link @yield('history')" href="{{url('admin/history')}}"> <img
+                                src="{{asset('assets/dashboard/img/history.png')}}" alt="dashboard-icon" class="menu-icon">
+                            History</a>
+                    </li>
 
                 <li class="nav-item">
                     <a class="nav-link " href="{{url('logout')}}"> <img

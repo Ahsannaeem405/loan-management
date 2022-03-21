@@ -54,6 +54,10 @@ Route::prefix('admin')->middleware(['auth','admin'])->group(function () {
     Route::post('/profile/update',[\App\Http\Controllers\AdminController::class,'myprofileUpdate']);
     Route::post('/password/update',[\App\Http\Controllers\AdminController::class,'passwordUpdate']);
 
+
+    //history
+    Route::get('/history',[\App\Http\Controllers\AdminController::class,'history']);
+
 });
 
 
