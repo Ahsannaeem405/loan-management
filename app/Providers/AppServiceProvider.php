@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Events\notification;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -23,6 +24,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+      \View::composer('dashboard.layout.main', function($view) {
+            $notifications = \App\Models\notification::where('to',\Auth::user()->id)->where('read',0)->get();
+
+            $view->with('notifications', array('notifications' => $notifications));
+        });
     }
 }

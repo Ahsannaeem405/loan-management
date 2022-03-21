@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\notification;
+use App\Events\sendMessage;
 use App\Models\loan;
 use App\Models\loanApplyCompany;
 use App\Models\loanDocument;
@@ -28,6 +30,7 @@ class UserController extends Controller
     }
     public function uploadLoan(Request $request)
     {
+
         $loan=loan::firstOrCreate(
             ['user_id'=> \Auth::user()->id, 'type'=>$request->type],
 
@@ -43,6 +46,14 @@ class UserController extends Controller
             $documet->loan_id=$loan->id;
             $documet->file=$filename;
             $documet->save();
+
+            $not=''.Auth::user()->name.' upload the document.';
+            $to=1;
+            $by=Auth::user()->id;
+            $url='admin/loan/detail/'.$loan->id.'';
+
+            $event = event(new notification($not,$to,$by,$url));
+
 
         }
         return back()->with('success','Document uploaded successfully');

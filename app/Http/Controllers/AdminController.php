@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\notification;
 use App\Models\companies;
 use App\Models\loan;
 use App\Models\loanApplyCompany;
@@ -17,7 +18,22 @@ class AdminController extends Controller
     public function dashboard()
     {
 
-        return view('dashboard.admin.index');
+        $user=User::where('role','user')->get()->count();
+        $admin=User::where('role','admin')->get()->count();
+        $loan=loan::get()->count();
+        $companies=companies::get()->count();
+        $equity=loan::where('type','Home equity')->get()->count();
+        $estate=loan::where('type','Real estate financing')->get()->count();
+        return view('dashboard.admin.index',compact('user','admin','loan','companies','equity','estate'));
+    }
+
+    public function notification(\App\Models\notification  $id)
+    {
+$not=$id;
+$not->read=1;
+$not->update();
+return redirect($not->url);
+
     }
 
     public function myprofile()
@@ -145,8 +161,23 @@ class AdminController extends Controller
 
             $loanAdd = loanApplyCompany::find($request->ids[$i]);
 
+
+            if ($loanAdd->status!=$request->status[$i])
+            {
+                $not='Your Loan application for '.$loanAdd->name.' has changed to '.$request->status[$i].'';
+                $to=$loanAdd->user_id;
+                $by=\Auth::user()->id;
+                $url='user/status';
+
+                $event = event(new notification($not,$to,$by,$url));
+
+            }
+
+
             $loanAdd->status=$request->status[$i];
             $loanAdd->update();
+
+
         }
         return back()->with('success','status updated successfully');
     }
@@ -161,11 +192,22 @@ return view('dashboard.common.comment',compact('loanadd'));
 
     public function sendComment($id,Request $request)
     {
+        $loanAdd = loanApplyCompany::find($id);
         $comment=new loanCompanyComment();
         $comment->user_id=\Auth::user()->id;
         $comment->loan_apply_id=$id;
         $comment->comment=$request->msg;
         $comment->save();
+
+
+        $not='Your have received a message on '.$loanAdd->name.' by '.\Auth::user()->name.'';
+        $to=\Auth::user()->role=='user' ? 1 : $loanAdd->user_id;
+        $by=\Auth::user()->id;
+        $url=\Auth::user()->role=='user' ? 'admin/comment/'.$loanAdd->id.'' : 'user/comment/'.$loanAdd->id.'' ;
+
+        $event = event(new notification($not,$to,$by,$url));
+
+
         return back()->with('success','Message send successfully');
     }
     public function sendDocument($id,Request $request)
@@ -185,7 +227,26 @@ return view('dashboard.common.comment',compact('loanadd'));
 
 
         }
+
         $doc->save();
+
+
+
+
+
+
+        $loanAdd = loanApplyCompany::find($id);
+
+
+
+        $not='Your have received a document on '.$loanAdd->name.' by '.\Auth::user()->name.'';
+        $to=1;
+        $by=\Auth::user()->id;
+        $url='admin/loan/doc/'.$loanAdd->id.'' ;
+
+        $event = event(new notification($not,$to,$by,$url));
+
+
         return back()->with('success','Document send successfully');
     }
 

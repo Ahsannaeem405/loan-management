@@ -6,7 +6,22 @@
 @section('content')
 
 
+    <style>
 
+        .main-card1 {
+            background-image: linear-gradient(90deg, #77e1da, #14b3a9);
+            color: white;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            border-radius: 10px
+        }
+
+        .main-card2 {
+            background-image: linear-gradient(90deg, #6053fa, #3a2beb);
+            color: white;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            border-radius: 10px
+        }
+    </style>
 
     <!-- Dashboard Start -->
     <section class="page-section">
@@ -22,66 +37,114 @@
                 </div>
             </div>
             <div class="row justify-content-center ">
-                <div class="col-lg-9 col-11 p-0 my-5">
-                    <div class="welcom-note py-3 px-2 ">
-                        <p>Seja bem vindo ao novo Dashboard! Precisa de ajuda? <a href="#">Clique aqui!</a> </p>
-                    </div>
+                <div class="col-lg-12  my-5">
+                    <div class="row ">
 
-                    <div class="blank-div mt-4"></div>
-                    <!--black-div end-->
 
-                    <div class="blog-notes  w-100 ">
-                        <div class="row">
-                            <div class="col-lg-6 col-12 mt-4">
-                                <h4>ÚLTIMAS DO BLOG</h4>
-                                <div class="details-block">
-                                    <div class="d-flex align-items-start mb-3">
-                                        <i class="icofont-wifi"></i>
-                                        <p class="mb-0 pl-2">Como imprimir dinheiro em flops com pares sendo o
-                                            agressor
-                                            pre-flop</p>
+                        <div class="col-lg-4  col-12 mb-5">
+                            <div class="card p-3 main-card1" style="">
+                                <div class=" d-flex">
+                                    <div class="mr-3 w-25 text-center align-items-center d-flex">
+                                        <i class="fa fa-user w-100" style="font-size: 4rem"></i>
                                     </div>
-                                    <div class="d-flex align-items-start mb-3">
-                                        <i class="icofont-wifi"></i>
-                                        <p class="mb-0 pl-2">Saiba como calcular o valor esperado nas apostas
-                                            esportivas
-                                        </p>
+
+                                    <div class="">
+                                        <p class="mb-0 mt-2" style="font-size: 20px">Admin</p>
+                                        <p style="font-size: 20px">{{$admin}}</p>
                                     </div>
-                                    <div class="d-flex align-items-start mb-3">
-                                        <i class="icofont-wifi"></i>
-                                        <p class="mb-0 pl-2">ICM do Poker - Explicado</p>
-                                    </div>
-                                    <div class="d-flex align-items-start mb-3">
-                                        <i class="icofont-wifi"></i>
-                                        <p class="mb-0 pl-2">Quando (e como) os melhores do mundo overbetam no
-                                            turn</p>
-                                    </div>
-                                    <div class="d-flex align-items-start mb-3">
-                                        <i class="icofont-wifi"></i>
-                                        <p class="mb-0 pl-2">Respostas do Quiz: Quando defender o big blind</p>
-                                    </div>
+
                                 </div>
-                            </div>
-                            <div class="col-lg-6 col-12 mt-4">
-                                <h4>AVISOS</h4>
-                                <div class="details-block">
-                                    <div class="d-flex align-items-start mb-3">
-                                        <img src="{{asset('assets/dashboard/img/defual.png')}}" alt="icon">
-                                        <p class="mb-0 pl-2">Veja nosso novo sistema de afiliados, indique e
-                                            ganhe.
-                                            Clique no menu a esquerda.</p>
-                                    </div>
-                                    <div class="d-flex align-items-start mb-3">
-                                        <img src="{{asset('assets/dashboard/img/defual.png')}}" alt="icon">
-                                        <p class="mb-0 pl-2">Consulte o histórico de transações anteriores a
-                                            17/05/2021
-                                            aqui.</p>
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
 
-                    </div><!-- blog-notes end -->
+                        <div class="col-lg-4  col-12 mb-5">
+                            <div class="card p-3 main-card1" style="">
+                                <div class=" d-flex">
+                                    <div class="mr-3 w-25 text-center align-items-center d-flex">
+                                        <i class="fa fa-user w-100" style="font-size: 4rem"></i>
+                                    </div>
+
+                                    <div class="">
+                                        <p class="mb-0 mt-2" style="font-size: 20px">Users</p>
+                                        <p style="font-size: 20px">{{$user}}</p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4  col-12 mb-5">
+                            <div class="card p-3 main-card1" style="">
+                                <div class=" d-flex">
+                                    <div class="mr-3 w-25 text-center align-items-center d-flex">
+                                        <i class="fa fa-user w-100" style="font-size: 4rem"></i>
+                                    </div>
+
+                                    <div class="">
+                                        <p class="mb-0 mt-2" style="font-size: 20px">Companies</p>
+                                        <p style="font-size: 20px">{{$companies}}</p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4  col-12 mb-3">
+                            <div class="card p-3 main-card2" style="">
+                                <div class=" d-flex">
+                                    <div class="mr-3 w-25 text-center align-items-center d-flex">
+                                        <i class="fa fa-user w-100" style="font-size: 4rem"></i>
+                                    </div>
+
+                                    <div class="">
+                                        <p class="mb-0 mt-2" style="font-size: 20px">Total Loans</p>
+                                        <p style="font-size: 20px">{{$loan}}</p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4  col-12 mb-3">
+                            <div class="card p-3 main-card2" style="">
+                                <div class=" d-flex">
+                                    <div class="mr-3 w-25 text-center align-items-center d-flex">
+                                        <i class="fa fa-user w-100" style="font-size: 4rem"></i>
+                                    </div>
+
+                                    <div class="">
+                                        <p class="mb-0 mt-2" style="font-size: 20px">Home equity</p>
+                                        <p style="font-size: 20px">{{$equity}}</p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4  col-12 mb-3">
+                            <div class="card p-3 main-card2" style="">
+                                <div class=" d-flex">
+                                    <div class="mr-3 w-25 text-center align-items-center d-flex">
+                                        <i class="fa fa-user w-100" style="font-size: 4rem"></i>
+                                    </div>
+
+                                    <div class="">
+                                        <p class="mb-0 mt-2" style="font-size: 20px">Real estate financing</p>
+                                        <p style="font-size: 20px">{{$estate}}</p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
                 </div>
             </div>
         </div>

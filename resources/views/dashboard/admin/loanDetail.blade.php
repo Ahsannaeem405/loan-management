@@ -5,7 +5,121 @@
 @section('content')
 
 
+    <style>
 
+
+
+        .progress {
+            width: 30px;
+            height: 30px;
+            font-size: 15px;
+            color: #fff;
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+            background: white;
+            text-align: center;
+
+        }
+
+
+        .progress .title {
+            position: relative;
+            z-index: 100;
+            margin: auto
+        }
+
+        .progress .overlay {
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            background-color: white;
+        }
+
+        .progress .left, .progress .right {
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: 3px solid #26da17;
+            border-radius: 100px 0px 0px 100px;
+            border-right: 0;
+            transform-origin: right;
+        }
+
+        .icofont-tick-mark {
+            color: gray;
+        }
+
+        .animate1 {
+            animation: load1 1s linear forwards;
+        }
+
+        .animate2 {
+            animation: load2 1s linear forwards;
+        }
+
+        .animate3 {
+            animation: load3 1s linear forwards;
+        }
+
+        .animate4 {
+            animation: load4 1s linear forwards;
+        }
+
+
+        /*.progress:nth-of-type(2) .right, .progress:nth-of-type(3) .right {animation: load2 .5s linear forwards 1s;}*/
+
+        /*.progress:last-of-type .right, .progress:first-of-type .right {animation: load3 .8s linear forwards 1s;}*/
+
+        @keyframes load1 {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(110deg);
+            }
+        }
+
+        @keyframes load2 {
+            0% {
+                transform: rotate(110deg);
+            }
+
+            100% {
+                transform: rotate(180deg);
+            }
+        }
+
+        @keyframes load3 {
+            0% {
+                z-index: 100;
+                transform: rotate(180deg);
+            }
+
+            100% {
+                z-index: 100;
+                transform: rotate(240deg);
+            }
+        }
+
+        @keyframes load4 {
+            0% {
+                z-index: 100;
+                transform: rotate(240deg);
+            }
+
+            100% {
+                z-index: 100;
+                transform: rotate(360deg);
+            }
+        }
+    </style>
 
 
 
@@ -185,8 +299,14 @@
                                                 <tr>
                                                     <td class="px-3">{{$com->name}}</td>
                                                     <td class=" mx-auto">
-                                                        <div class="marked">
-                                                            <i class="icofont-tick-mark"></i>
+                                                        <div class="progress">
+                                                            <span class="title timer" data-from="0" data-to="100"
+                                                                  data-speed="1800">  <i class="icofont-tick-mark"></i></span>
+                                                            <div class="overlay"></div>
+                                                            <div
+                                                                class="left  @if($com->status=="Loan under Analysis" || $com->status=="Pending Resolution" || $com->status=="Finished") animate1 @endif   @if( $com->status=="Pending Resolution" || $com->status=="Finished") animate2 @endif"></div>
+                                                            <div
+                                                                class="right  @if($com->status=="Pending Resolution" || $com->status=="Finished") animate3 @endif  @if($com->status=="Finished") animate4 @endif "></div>
                                                         </div>
                                                     </td>
                                                     <td class="msg">
@@ -203,7 +323,7 @@
                                                     <td>{{$com->category}}</td>
                                                     <td>{{$com->type}}</td>
                                                     <td>{{$com->price}}</td>
-                                                    <td class="loan-status ">
+                                                    <td class="loan-status">
                                                         <select name="status[]" class="form-control" id="">
                                                             <option
                                                                 {{$com->status=='Pending' ? 'selected' : null}}  value="Pending">
@@ -213,6 +333,7 @@
                                                                 {{$com->status=='Unfit Loan' ? 'selected' : null}} value="Unfit Loan">
                                                                 Unfit Loan
                                                             </option>
+
                                                             <option
                                                                 {{$com->status=='Documentation Pending' ? 'selected' : null}} value="Documentation Pending">
                                                                 Documentation Pending
@@ -225,9 +346,15 @@
                                                                 {{$com->status=='Pending Resolution' ? 'selected' : null}} value="Pending Resolution">
                                                                 Pending Resolution
                                                             </option>
+
                                                             <option
                                                                 {{$com->status=='Finished' ? 'selected' : null}} value="Finished">
                                                                 Finished
+                                                            </option>
+
+                                                            <option
+                                                                {{$com->status=='Loan Rejected' ? 'selected' : null}} value="Loan Rejected">
+                                                                Loan Rejected
                                                             </option>
                                                         </select></td>
                                                     <td class="msg">

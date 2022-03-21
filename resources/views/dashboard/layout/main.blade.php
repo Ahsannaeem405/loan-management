@@ -27,6 +27,30 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <title>Dashboard</title>
+
+    <style>
+        .not-drop{
+            transform: translateX(-60%) !important;
+            top: 50px !important;
+            width: 300px;
+            height: 250px;
+            overflow: auto;
+        }
+        .no-msg-not{
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background-color: #d72525;
+            font-size: 10px;
+            color: #fff;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: 55%;
+            left: 50%;
+        }
+    </style>
 </head>
 
 <body>
@@ -141,6 +165,7 @@
         </ul>
 
     </div>
+
     <!-- Siderbar End -->
     <main>
         <!-- header start -->
@@ -163,15 +188,36 @@
 
                 </div>
                 <div class="col-md-6 col-12 p-0">
-                    <div
-                        class="profile-side d-flex justify-content-md-end justify-content-between align-items-center mt-3 mt-md-0">
 
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="25"
-                             height="30">
-                            <path fill="none" d="M0 0h24v24H0z"/>
-                            <path fill="#fff"
-                                  d="M20 17h2v2H2v-2h2v-7a8 8 0 1 1 16 0v7zM9 21h6v2H9v-2z"/>
-                        </svg>
+
+
+                    <div class="profile-side d-flex  align-items-center justify-content-end mt-3 mt-md-0">
+
+
+                        <div style="position:relative;">
+                        <div class="dropdown"  >
+                            <svg class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="25"
+                                 height="30">
+                                <path fill="none" d="M0 0h24v24H0z"/>
+                                <path fill="#fff"
+                                      d="M20 17h2v2H2v-2h2v-7a8 8 0 1 1 16 0v7zM9 21h6v2H9v-2z"/>
+                            </svg>
+                           <div class="no-msg-not">
+                               {{count($notifications['notifications'])}}
+                           </div>
+                            <div class="dropdown-menu not-drop" aria-labelledby="dropdownMenuButton" style="he">
+                                <h3 class="text-center">Notification</h3>
+                              @foreach($notifications['notifications'] as $not)
+                                    <a class="dropdown-item " href="{{url('notification/'.$not->id.'')}}">{{$not->notification}}</a>
+                                    <hr>
+                              @endforeach
+
+
+                            </div>
+                        </div>
+                        </div>
+
+
                         <img
                             src="{{asset('assets/dashboard/profile/'.Auth::user()->profile.'')}}"
                             alt="user-img" class="user-img">

@@ -57,6 +57,7 @@ Route::prefix('admin')->middleware(['auth','admin'])->group(function () {
 });
 
 
+
 Route::prefix('user')->middleware(['auth','user'])->group(function () {
     Route::get('/index',[\App\Http\Controllers\UserController::class,'dashboard']);
 
@@ -94,5 +95,6 @@ Route::get('logout',function (){
     Auth::logout();
     return redirect('/');
 });
+Route::get('notification/{id}',[\App\Http\Controllers\AdminController::class,'notification']);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -4,6 +4,124 @@
 @endsection
 @section('content')
 
+    <style>
+
+
+
+        .progress {
+            width: 30px;
+            height: 30px;
+            font-size: 15px;
+            color: #fff;
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+            background: white;
+            text-align: center;
+
+        }
+
+
+        .progress .title {
+            position: relative;
+            z-index: 100;
+            margin: auto
+        }
+
+        .progress .overlay {
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            background-color: white;
+        }
+
+        .progress .left, .progress .right {
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: 3px solid #26da17;
+            border-radius: 100px 0px 0px 100px;
+            border-right: 0;
+            transform-origin: right;
+        }
+
+        .icofont-tick-mark {
+            color: gray;
+        }
+
+        .animate1 {
+            animation: load1 1s linear forwards;
+        }
+
+        .animate2 {
+            animation: load2 1s linear forwards;
+        }
+
+        .animate3 {
+            animation: load3 1s linear forwards;
+        }
+
+        .animate4 {
+            animation: load4 1s linear forwards;
+        }
+
+
+        /*.progress:nth-of-type(2) .right, .progress:nth-of-type(3) .right {animation: load2 .5s linear forwards 1s;}*/
+
+        /*.progress:last-of-type .right, .progress:first-of-type .right {animation: load3 .8s linear forwards 1s;}*/
+
+        @keyframes load1 {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(110deg);
+            }
+        }
+
+        @keyframes load2 {
+            0% {
+                transform: rotate(110deg);
+            }
+
+            100% {
+                transform: rotate(180deg);
+            }
+        }
+
+        @keyframes load3 {
+            0% {
+                z-index: 100;
+                transform: rotate(180deg);
+            }
+
+            100% {
+                z-index: 100;
+                transform: rotate(240deg);
+            }
+        }
+
+        @keyframes load4 {
+            0% {
+                z-index: 100;
+                transform: rotate(240deg);
+            }
+
+            100% {
+                z-index: 100;
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+
+
 
     <!-- page body Start -->
     <section class="page-section">
@@ -64,9 +182,18 @@
                                                 <tr>
                                                     <td class="px-3">{{$equity->name}}</td>
                                                     <td class=" mx-auto">
-                                                        <div class="marked">
-                                                            <i class="icofont-tick-mark"></i>
+
+                                                        <div class="progress">
+                                                            <span class="title timer" data-from="0" data-to="100"
+                                                                  data-speed="1800">  <i class="icofont-tick-mark"></i></span>
+                                                            <div class="overlay"></div>
+                                                            <div
+                                                                class="left  @if($equity->status=="Loan under Analysis" || $equity->status=="Pending Resolution" || $equity->status=="Finished") animate1 @endif   @if( $equity->status=="Pending Resolution" || $equity->status=="Finished") animate2 @endif"></div>
+                                                            <div
+                                                                class="right  @if($equity->status=="Pending Resolution" || $equity->status=="Finished") animate3 @endif  @if($equity->status=="Finished") animate4 @endif "></div>
                                                         </div>
+
+
                                                     </td>
                                                     <td class="msg">
                                                         <a href="{{url("user/comment/$equity->id")}}">
@@ -84,9 +211,19 @@
                                                     <td>{{$equity->category}}</td>
                                                     <td>{{$equity->type}}</td>
                                                     <td>{{$equity->price}}</td>
-                                                    <td class="loan-status collect">{{$equity->status}}</td>
+                                                    <td class="loan-status
+@if($equity->status=="Pending") btn-danger
+@elseif($equity->status=="Unfit Loan") btn-danger
+@elseif($equity->status=="Loan Rejected") btn-danger
+@elseif($equity->status=="Documentation Pending") btn-warning
+@elseif($equity->status=="Loan under Analysis") btn-primary
+@elseif($equity->status=="Pending Resolution") btn-primary
+@elseif($equity->status=="Finished") btn-success
+@endif
+                                                        ">{{$equity->status}}</td>
                                                     <td class="msg">
-                                                        <a href="{{url('user/loan/doc/'.$equity->id.'')}}">   <i class="fa fa-dedent"></i>
+                                                        <a href="{{url('user/loan/doc/'.$equity->id.'')}}"> <i
+                                                                class="fa fa-dedent"></i>
 
                                                             <div class="msg-no">
                                                                 {{count($equity->document)}}
@@ -131,9 +268,17 @@
                                                 <tr>
                                                     <td class="px-3">{{$estate->name}}</td>
                                                     <td class=" mx-auto">
-                                                        <div class="marked">
-                                                            <i class="icofont-tick-mark"></i>
+                                                        <div class="progress">
+                                                            <span class="title timer" data-from="0" data-to="100"
+                                                                  data-speed="1800">  <i class="icofont-tick-mark"></i></span>
+                                                            <div class="overlay"></div>
+                                                            <div
+                                                                class="left  @if($estate->status=="Loan under Analysis" || $estate->status=="Pending Resolution" || $estate->status=="Finished") animate1 @endif   @if( $estate->status=="Pending Resolution" || $estate->status=="Finished") animate2 @endif"></div>
+                                                            <div
+                                                                class="right  @if($estate->status=="Pending Resolution" || $estate->status=="Finished") animate3 @endif  @if($estate->status=="Finished") animate4 @endif "></div>
                                                         </div>
+
+
                                                     </td>
                                                     <td class="msg">
                                                         <a href="{{url("user/comment/$estate->id")}}">
@@ -151,9 +296,19 @@
                                                     <td>{{$estate->category}}</td>
                                                     <td>{{$estate->type}}</td>
                                                     <td>{{$estate->price}}</td>
-                                                    <td class="loan-status collect">{{$estate->status}}</td>
+                                                    <td class="loan-status
+@if($estate->status=="Pending") btn-danger
+@elseif($estate->status=="Unfit Loan") btn-danger
+@elseif($estate->status=="Loan Rejected") btn-danger
+@elseif($estate->status=="Documentation Pending") btn-warning
+@elseif($estate->status=="Loan under Analysis") btn-primary
+@elseif($estate->status=="Pending Resolution") btn-primary
+@elseif($estate->status=="Finished") btn-success
+@endif
+                                                        ">{{$estate->status}}</td>
                                                     <td class="msg">
-                                                        <a href="{{url('user/loan/doc/'.$estate->id.'')}}">   <i class="fa fa-dedent"></i>
+                                                        <a href="{{url('user/loan/doc/'.$estate->id.'')}}"> <i
+                                                                class="fa fa-dedent"></i>
 
                                                             <div class="msg-no">
                                                                 {{count($estate->document)}}
