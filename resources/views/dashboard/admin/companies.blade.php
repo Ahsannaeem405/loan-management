@@ -22,7 +22,7 @@
 
 
                             <div class="col-lg-12 ">
-                                <lable class="label">Company name</lable>
+                                <lable class="label">Company Name</lable>
                                 <input type="text" class="form-control" name="name" required>
                             </div>
 
@@ -84,7 +84,7 @@
                                 <td>{{$companie->name}}</td>
 
                                 <td>
-                                    <a href="{{url('admin/company/delete/'.$companie->id.'')}}"> <i style="color: red" class="fa fa-trash"></i></a>
+                                    <a href="{{url('admin/company/delete/'.$companie->id.'')}}" onclick="return confirm('Are you sure you want to delete this company?');"> <i style="color: red" class="fa fa-trash"></i></a>
                                      <i data-toggle="modal" data-target="#addcompany{{$companie->id}}" style="color: blue;cursor: pointer" class="fa fa-edit"></i>
                                 </td>
                             </tr>
@@ -107,7 +107,7 @@
 
 
                                                     <div class="col-lg-12 ">
-                                                        <lable class="label">Company name</lable>
+                                                        <lable class="label">Company Name</lable>
                                                         <input type="text" class="form-control" name="name" value="{{$companie->name}}" required>
                                                     </div>
 

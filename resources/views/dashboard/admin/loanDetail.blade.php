@@ -216,7 +216,7 @@
                         <div class="row">
                             <lable class="font-weight-bold my-2">Apply in another company</lable>
                             <select name="" id="companies" class="form-control">
-                                <option value="">Select please</option>
+                                <option value="">Select Please</option>
                                 @foreach($companies as $com)
                                     <option value="{{$com->name}}">{{$com->name}}</option>
                                 @endforeach
@@ -343,6 +343,7 @@
                                                                 Loan under Analysis
                                                             </option>
                                                             <option
+                                                                {{$com->status=='Pending Resolution' ? 'selected' : null}} value="Pending Resolution">
                                                                 {{$com->status=='Pending Resolution' ? 'selected' : null}} value="Pending Resolution">
                                                                 Pending Resolution
                                                             </option>

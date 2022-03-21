@@ -165,7 +165,7 @@ return redirect($not->url);
 
             if ($loanAdd->status!=$request->status[$i])
             {
-                $not='Your Loan application for '.$loanAdd->name.' has changed to '.$request->status[$i].'';
+                $not='Your Loan application status for '.$loanAdd->name.' has changed to '.$request->status[$i].'.';
                 $to=$loanAdd->user_id;
                 $by=\Auth::user()->id;
                 $url='user/status';
@@ -180,7 +180,7 @@ return redirect($not->url);
 
 
         }
-        return back()->with('success','status updated successfully');
+        return back()->with('success','Status updated successfully');
     }
 
     public function viewComment($id)
@@ -201,7 +201,7 @@ return view('dashboard.common.comment',compact('loanadd'));
         $comment->save();
 
 
-        $not='Your have received a message on '.$loanAdd->name.' by '.\Auth::user()->name.'';
+        $not='Your have received a message on '.$loanAdd->name.' by '.\Auth::user()->name.'.';
         $to=\Auth::user()->role=='user' ? 1 : $loanAdd->user_id;
         $by=\Auth::user()->id;
         $url=\Auth::user()->role=='user' ? 'admin/comment/'.$loanAdd->id.'' : 'user/comment/'.$loanAdd->id.'' ;
@@ -240,7 +240,7 @@ return view('dashboard.common.comment',compact('loanadd'));
 
 
 
-        $not='Your have received a document on '.$loanAdd->name.' by '.\Auth::user()->name.'';
+        $not='Your have received a document on '.$loanAdd->name.' by '.\Auth::user()->name.'.';
         $to=1;
         $by=\Auth::user()->id;
         $url='admin/loan/doc/'.$loanAdd->id.'' ;

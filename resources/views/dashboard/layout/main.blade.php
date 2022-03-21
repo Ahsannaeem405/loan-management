@@ -207,10 +207,15 @@
                                 <path fill="#fff"
                                       d="M20 17h2v2H2v-2h2v-7a8 8 0 1 1 16 0v7zM9 21h6v2H9v-2z"/>
                             </svg>
-                           <div class="no-msg-not">
-                               {{count($notifications['notifications'])}}
-                           </div>
-                            <div class="dropdown-menu not-drop" aria-labelledby="dropdownMenuButton" style="he">
+
+
+
+                            @if(count($notifications['notifications'])!=0)
+                                <div class="no-msg-not">
+                                    {{count($notifications['notifications'])}}
+                                </div>
+                            @endif
+                            <div class="dropdown-menu not-drop" aria-labelledby="dropdownMenuButton" style="">
                                 <h3 class="text-center">Notification</h3>
                               @foreach($notifications['notifications'] as $not)
                                     <a class="dropdown-item " href="{{url('notification/'.$not->id.'')}}">{{$not->notification}}</a>

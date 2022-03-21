@@ -41,7 +41,9 @@
                                 <td>{{$user->name}}</td>
                                 <td>{{$user->email}}</td>
                                 <td>
-                                    <a href="{{url('admin/user/delete/'.$user->id.'')}}"> <i style="color: red" class="fa fa-trash"></i></a>
+                                    <a href="{{url('admin/user/delete/'.$user->id.'')}}"
+                                       onclick="return confirm('Are you sure you want to delete this user?');"> <i
+                                            style="color: red" class="fa fa-trash"></i></a>
                                 </td>
                             </tr>
                         @endforeach
