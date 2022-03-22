@@ -159,6 +159,18 @@
                             History</a>
                     </li>
 
+                    <li class="nav-item">
+                        <a class="nav-link @yield('banner')" href="{{url('admin/banner')}}"> <img
+                                src="{{asset('assets/dashboard/img/history.png')}}" alt="dashboard-icon" class="menu-icon">
+                            Banner</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link @yield('report')" href="{{url('admin/report')}}"> <img
+                                src="{{asset('assets/dashboard/img/history.png')}}" alt="dashboard-icon" class="menu-icon">
+                            Report</a>
+                    </li>
+
                 <li class="nav-item">
                     <a class="nav-link " href="{{url('logout')}}"> <img
                             src="{{asset('assets/dashboard/img/history.png')}}" alt="dashboard-icon" class="menu-icon">

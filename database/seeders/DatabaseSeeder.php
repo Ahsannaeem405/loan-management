@@ -23,5 +23,11 @@ class DatabaseSeeder extends Seeder
             ['name' => "admin",'email'=>'admin@gmail.com','role'=>'admin','password'=>''.$hash.''],
 
         ]);
+
+        DB::table('banners')->insert([
+
+            ['image' => "banner.png"],
+
+        ]);
     }
 }

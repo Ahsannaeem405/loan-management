@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Events\notification;
+use App\Models\banner;
 use App\Models\companies;
 use App\Models\loan;
 use App\Models\loanApplyCompany;
 use App\Models\loanCompanyComment;
 use App\Models\loanCompanyDocument;
 use App\Models\loanDocument;
+use App\Models\report;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -305,6 +307,66 @@ return view('dashboard.common.comment',compact('loanadd'));
 
         return view('dashboard.common.history',compact('equity','estate','pending','unfit','dpending','analysis','resolution','finished'));
     }
+
+    public function banner()
+    {
+        $banner=banner::first();
+        return view('dashboard.admin.banner',compact('banner'));
+    }
+
+    public function Updatebanner(Request $request)
+    {
+
+        if ($request->hasfile('file')) {
+            $file = $request->file('file');
+            $extension = $file->getClientOriginalExtension(); // getting image extension
+            $filename = $file->getClientOriginalName();
+            $file->move('assets/dashboard/banner/', $filename);
+
+            $banner=banner::find(1);
+            $banner->image=$filename;
+            $banner->update();
+            return back()->with('success','Banner image updated successfully');
+
+
+
+        }
+    }
+
+    public function report()
+    {
+
+        $report=report::all();
+        return view('dashboard.admin.report',compact('report'));
+    }
+
+    public function uploadReport(Request $request)
+    {
+
+        if ($request->hasfile('file')) {
+            $file = $request->file('file');
+            $extension = $file->getClientOriginalExtension(); // getting image extension
+            $filename = $file->getClientOriginalName();
+            $file->move('assets/dashboard/report/', $filename);
+
+            $report= new report();
+            $report->file=$filename;
+            $report->save();
+            return back()->with('success','Report save successfully');
+
+
+
+        }
+
+    }
+
+
+    public function deleteReport($id){
+        $report=report::find($id)->delete();
+        return back()->with('success','Report deleted successfully');
+
+    }
+
 
 
 }

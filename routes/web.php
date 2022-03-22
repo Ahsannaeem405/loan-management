@@ -58,6 +58,18 @@ Route::prefix('admin')->middleware(['auth','admin'])->group(function () {
     //history
     Route::get('/history',[\App\Http\Controllers\AdminController::class,'history']);
 
+    //banner
+    Route::get('/banner',[\App\Http\Controllers\AdminController::class,'banner']);
+    Route::post('/update/banner',[\App\Http\Controllers\AdminController::class,'Updatebanner']);
+
+    //report
+    Route::get('/report',[\App\Http\Controllers\AdminController::class,'report']);
+    Route::post('/upload/report',[\App\Http\Controllers\AdminController::class,'uploadReport']);
+    Route::get('/report/delete/{id}',[\App\Http\Controllers\AdminController::class,'deleteReport']);
+
+
+
+
 });
 
 

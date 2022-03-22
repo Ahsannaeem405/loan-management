@@ -26,7 +26,9 @@ active
                         <p>Seja bem vindo ao novo Dashboard! Precisa de ajuda? <a href="#">Clique aqui!</a> </p>
                     </div>
 
-                    <div class="blank-div mt-4"></div>
+                    <div class=" mt-4">
+                        <img style="border-radius: 20px" src="{{asset('assets/dashboard/banner/'.$banner->image.'')}}" class="w-100" alt="">
+                    </div>
                     <!--black-div end-->
 
                     <div class="blog-notes  w-100 ">

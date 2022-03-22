@@ -5,6 +5,8 @@
 @section('content')
 
 
+
+
     <!-- Dashboard Start -->
     <section class="page-section">
         <div class="container-fluid">
@@ -18,28 +20,28 @@
                     </nav>
                 </div>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-11">
-                    <div class="report-card mt-4 d-flex align-items-center">
-                        <img src="{{asset('assets/dashboard/img/doc file.png')}}" alt="alt-file">
-                        <h6>Relatório jurídico</h6>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path fill="white" d="M3 19h18v2H3v-2zm10-5.828L19.071 7.1l1.414 1.414L12 17 3.515 8.515 4.929 7.1 11 13.17V2h2v11.172z"/></svg>
+
+
+            <div class="row">
+
+                @foreach($report as $report)
+                    <div class="col-lg-6">
+                        <div class="report-card mt-4 d-flex align-items-center">
+                            <img src="{{asset('assets/dashboard/img/doc file.png')}}" alt="alt-file">
+                            <h6>{{$report->file}}</h6>
+                            <a href="{{asset('assets/dashboard/report/'.$report->file.'')}}" download="">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path fill="white" d="M3 19h18v2H3v-2zm10-5.828L19.071 7.1l1.414 1.414L12 17 3.515 8.515 4.929 7.1 11 13.17V2h2v11.172z"/></svg>
+
+                            </a>
+
+
+                        </div>
                     </div>
-                </div>
-                <div class="col-11">
-                    <div class="report-card mt-4 d-flex align-items-center">
-                        <img src="{{asset('assets/dashboard/img/doc file.png')}}" alt="alt-file">
-                        <h6>Formulário</h6>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path fill="white" d="M3 19h18v2H3v-2zm10-5.828L19.071 7.1l1.414 1.414L12 17 3.515 8.515 4.929 7.1 11 13.17V2h2v11.172z"/></svg>
-                    </div>
-                </div>
-                <div class="col-11">
-                    <div class="report-card mt-4 d-flex align-items-center">
-                        <img src="{{asset('assets/dashboard/img/doc file.png')}}" alt="alt-file">
-                        <h6>Contráto</h6>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path fill="white" d="M3 19h18v2H3v-2zm10-5.828L19.071 7.1l1.414 1.414L12 17 3.515 8.515 4.929 7.1 11 13.17V2h2v11.172z"/></svg>
-                    </div>
-                </div>
+                @endforeach
+
+
+
             </div>
         </div>
     </section>
