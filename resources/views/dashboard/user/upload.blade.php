@@ -29,7 +29,7 @@
 
                         <div class="upload-details ">
                             <div class="row justify-content-center align-items-center">
-                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8 mt-3">
+                     `           <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8 mt-3">
                                     <div sec="1"
                                         class="upload-btn active py-4 d-flex align-items-center justify-content-center">
                                         <i class="icofont-home"></i>
@@ -50,16 +50,14 @@
                                     <input type="file" name="file" id="file1" class="d-none">
                                     <input type="hidden" name="type" value="Home equity">
                                 </form>
-                                <div class="col-lg-12 text-center">
-                                    <button class="btn btn-primary upload1">UPLOAD DOCUMENT</button>
-                                </div>
+
 
                                 @if($equity)
                                     @foreach($equity->equity as $equity)
                                         <div class="col-lg-6 col-md-12 col-12 mt-3">
                                             <div
                                                 class="display-msg-success d-flex justify-content-start align-items-center">
-                                                <h6 class="mb-0">Document {{$i++}}</h6>
+                                                <h6 class="mb-0">Additional Document {{$i++}}</h6>
                                                 <div class="file-details">
                                                     {{$equity->file}}
                                                     <i class="icofont-tick-mark"></i>
@@ -69,6 +67,10 @@
                                     @endforeach
 
                                 @endif
+
+                                <div class="col-lg-12 text-center my-5">
+                                    <button class="btn btn-primary upload1"> <i class="fa fa-plus"></i> Adicionar novo</button>
+                                </div>
 
 
 
@@ -80,7 +82,7 @@
                                     <input type="hidden" name="type" value="Real estate financing">
                                 </form>
                                 <div class="col-lg-12 text-center">
-                                    <button class="btn btn-primary upload2">UPLOAD DOCUMENT</button>
+                                    <button class="btn btn-primary upload2"><i class="fa fa-plus"></i> Adicionar novo</button>
                                 </div>
 
                                 @if($estate)
@@ -88,7 +90,7 @@
                                         <div class="col-lg-6 col-md-12 col-12 mt-3">
                                             <div
                                                 class="display-msg-success d-flex justify-content-start align-items-center">
-                                                <h6 class="mb-0">Document {{$j++}}</h6>
+                                                <h6 class="mb-0">Additional Document {{$j++}}</h6>
                                                 <div class="file-details">
                                                   {{$estate->file}}
                                                     <i class="icofont-tick-mark"></i>
