@@ -26,12 +26,13 @@ class UserController extends Controller
     public function upload()
     {
 
-        $i = $j = 1;
+        $i = $j =$k= 1;
         $equity = loan::where('user_id', \Auth::user()->id)->where('type', 'Home equity')->with('equity')->first();
         $estate = loan::where('user_id', \Auth::user()->id)->where('type', 'Real estate financing')->with('estate')->first();
+        $structured = loan::where('user_id', \Auth::user()->id)->where('type', 'structured')->with('structured')->first();
 
 
-        return view('dashboard.user.upload', compact('equity', 'estate', 'i', 'j'));
+        return view('dashboard.user.upload', compact('equity', 'estate', 'structured','i', 'j','k'));
     }
 
     public function uploadLoan(Request $request)
@@ -42,16 +43,28 @@ class UserController extends Controller
 
         );
 
+
+
         if ($request->hasfile('file')) {
+
             $file = $request->file('file');
             $extension = $file->getClientOriginalExtension(); // getting image extension
             $filename = $file->getClientOriginalName();
             $file->move('assets/dashboard/document/', $filename);
+            if ($request->field==null)
+            {
+                $documet = new loanDocument();
+                $documet->loan_id = $loan->id;
+                $documet->file = $filename;
+                $documet->save();
+            }
+            else{
 
-            $documet = new loanDocument();
-            $documet->loan_id = $loan->id;
-            $documet->file = $filename;
-            $documet->save();
+                $filed=$request->field;
+                $loan->$filed=$filename;
+                $loan->update();
+            }
+
 
             $not = '' . Auth::user()->name . ' upload the document.';
             $to = 1;
@@ -78,10 +91,12 @@ class UserController extends Controller
     public function status()
     {
 
+
         $equity = loanApplyCompany::where('user_id', \Auth::user()->id)->where('category', 'Home equity')->get();
         $estate = loanApplyCompany::where('user_id', \Auth::user()->id)->where('category', 'Real estate financing')->get();
+        $structured = loanApplyCompany::where('user_id', \Auth::user()->id)->where('category', 'structured')->get();
 
-        return view('dashboard.user.status', compact('estate', 'equity'));
+        return view('dashboard.user.status', compact('estate', 'equity','structured'));
     }
 
     public function report()

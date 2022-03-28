@@ -325,6 +325,91 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="status-table  real-estate mt-4">
+                                    <div class="table-icons my-2 mx-2">
+                                        <i class="icofont-caret-down"></i>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table table-borderless">
+                                            <thead>
+                                            <tr>
+                                                <th class="table-heading" colspan="3">Estruturada</th>
+
+
+                                                <th>Modalidade</th>
+                                                <th>Tipo</th>
+                                                <th>Valor de Crédito</th>
+                                                <th>Status da Operação</th>
+                                                <th>Atividades</th>
+
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            @foreach($structured as $structured)
+                                                <tr>
+                                                    <td class="px-3">{{$structured->name}}</td>
+                                                    <td class=" mx-auto">
+                                                        <div class="progress">
+                                                            <span class="title timer" data-from="0" data-to="100"
+                                                                  data-speed="1800">  <i class="icofont-tick-mark"></i></span>
+                                                            <div class="overlay"></div>
+                                                            <div
+                                                                class="left  @if($structured->status=="Loan under Analysis" || $structured->status=="Pending Resolution" || $structured->status=="Finished") animate1 @endif   @if( $structured->status=="Pending Resolution" || $structured->status=="Finished") animate2 @endif"></div>
+                                                            <div
+                                                                class="right  @if($structured->status=="Pending Resolution" || $structured->status=="Finished") animate3 @endif  @if($structured->status=="Finished") animate4 @endif "></div>
+                                                        </div>
+
+
+                                                    </td>
+                                                    <td class="msg">
+                                                        <a href="{{url("user/comment/$structured->id")}}">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                                 width="24" height="24">
+                                                                <path fill="none" d="M0 0h24v24H0z"/>
+                                                                <path fill="gray"
+                                                                      d="M7.291 20.824L2 22l1.176-5.291A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.956 9.956 0 0 1-4.709-1.176zm.29-2.113l.653.35A7.955 7.955 0 0 0 12 20a8 8 0 1 0-8-8c0 1.334.325 2.618.94 3.766l.349.653-.655 2.947 2.947-.655z"/>
+                                                            </svg>
+                                                            <div class="msg-no">
+                                                                {{count($structured->comment)}}
+                                                            </div>
+                                                        </a>
+                                                    </td>
+                                                    <td>{{$structured->category}}</td>
+                                                    <td>{{$structured->type}}</td>
+                                                    <td>{{$structured->price}}</td>
+                                                    <td class="loan-status
+@if($structured->status=="Pending") btn-danger
+@elseif($structured->status=="Unfit Loan") btn-danger
+@elseif($structured->status=="Loan Rejected") btn-danger
+@elseif($structured->status=="Documentation Pending") btn-warning
+@elseif($structured->status=="Loan under Analysis") btn-primary
+@elseif($structured->status=="Pending Resolution") btn-primary
+@elseif($structured->status=="Finished") btn-success
+@endif
+                                                        ">{{$structured->status}}</td>
+                                                    <td class="msg">
+                                                        <a href="{{url('user/loan/doc/'.$structured->id.'')}}"> <i
+                                                                class="fa fa-dedent"></i>
+
+                                                            <div class="msg-no">
+                                                                {{count($structured->document)}}
+                                                            </div>
+                                                        </a>
+                                                    </td>
+
+                                                </tr>
+
+                                            @endforeach
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>

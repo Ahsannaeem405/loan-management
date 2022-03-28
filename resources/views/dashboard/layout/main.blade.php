@@ -230,7 +230,7 @@
                             <div class="dropdown-menu not-drop" aria-labelledby="dropdownMenuButton" style="">
                                 <h3 class="text-center">Notification</h3>
                               @foreach($notifications['notifications'] as $not)
-                                    <a class="dropdown-item " href="{{url('notification/'.$not->id.'')}}">{{$not->notification}}</a>
+                                    <a class="dropdown-item " style="white-space: break-spaces;" href="{{url('notification/'.$not->id.'')}}">{{$not->notification}}</a>
                                     <hr>
                               @endforeach
 

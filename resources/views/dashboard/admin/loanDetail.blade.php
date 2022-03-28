@@ -185,7 +185,7 @@
                                 <div class="col-lg-6 col-md-12 col-12 mt-3">
                                     <div
                                         class="display-msg-success d-flex justify-content-start align-items-center">
-                                        <h6 class="mb-0">Document {{$i++}}</h6>
+                                        <h6 class="mb-0">Additional Document {{$i++}}</h6>
 
                                         <div class="file-details">
                                             {{$doc->file}}
@@ -344,7 +344,7 @@
                                                             </option>
                                                             <option
                                                                 {{$com->status=='Pending Resolution' ? 'selected' : null}} value="Pending Resolution">
-                                                                {{$com->status=='Pending Resolution' ? 'selected' : null}} value="Pending Resolution">
+
                                                                 Pending Resolution
                                                             </option>
 

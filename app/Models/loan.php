@@ -28,6 +28,10 @@ class loan extends Model
     {
         return $this->hasMany(loanDocument::class);
     }
+    public function structured()
+    {
+        return $this->hasMany(loanDocument::class);
+    }
 
     public function document()
     {
