@@ -25,7 +25,11 @@ class UserController extends Controller
 
     public function upload()
     {
-
+//        $data[0]=['rfid'=>122, 'test'=>566];
+//        $data[1]=['rfid'=>434, 'test'=>4343];
+//        $data=collect($data);
+//        $data2= $data->where('rfid','=',122);
+//        dd($data2[0]);
         $i = $j =$k= 1;
         $equity = loan::where('user_id', \Auth::user()->id)->where('type', 'Home equity')->with('equity')->first();
         $estate = loan::where('user_id', \Auth::user()->id)->where('type', 'Real estate financing')->with('estate')->first();
@@ -37,6 +41,7 @@ class UserController extends Controller
 
     public function uploadLoan(Request $request)
     {
+
 
         $loan = loan::firstOrCreate(
             ['user_id' => \Auth::user()->id, 'type' => $request->type],

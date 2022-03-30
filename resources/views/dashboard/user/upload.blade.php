@@ -7,6 +7,9 @@
 
 
 
+
+
+
     <!-- page body Start -->
     <section class="page-section">
         <div class="container-fluid">
@@ -61,36 +64,10 @@
                                     <input type="hidden" name="type" value="Home equity">
                                 </form>
 
-                                <div class="col-lg-6 col-md-12 col-12 mt-3">
-                                    <div class="display-msg-success d-flex justify-content-start align-items-center">
-                                        <h6 class="mb-0">ID CARD</h6>
+                            @include('dashboard.user.uploadComponent.home')
 
 
-                                        @if(!isset($equity->id_card))
 
-
-                                                <div class="file-details-fail">
-                                                    <form id="form1_1" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
-                                                        @csrf
-                                                        <input type="hidden" name="type" value="Home equity">
-                                                        <input type="hidden" name="field" value="id_card">
-                                                        <label >
-
-                                                <i class="icofont-cloud-upload" for="upload1_id_card"></i> Selecione o documento
-                                                        <input type="file" name="file" class="d-none upload1_form_data" main_form="1" form_id="1" id="upload_id_card">
-                                                <i class="icofont-exclamation error-icon"></i>
-                                                    </label>
-                                                    </form>
-                                            </div>
-
-                                        @else
-                                            <div class="file-details">
-                                                {{$equity->id_card}}
-                                                <i class="icofont-tick-mark" for="id_card"></i>
-                                            </div>
-                                        @endif
-                                    </div>
-                                </div>
 
                                 @if($equity)
                                     @foreach($equity->equity as $equity)
@@ -123,36 +100,12 @@
                                     <input type="hidden" name="type" value="Real estate financing">
                                 </form>
 
-                                <div class="col-lg-6 col-md-12 col-12 mt-3">
-                                    <div class="display-msg-success d-flex justify-content-start align-items-center">
-                                        <h6 class="mb-0">ID CARD</h6>
+
+                                @include('dashboard.user.uploadComponent.financ')
 
 
-                                        @if(!isset($estate->id_card))
 
 
-                                            <div class="file-details-fail">
-                                                <form id="form2_1" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
-                                                    @csrf
-                                                    <input type="hidden" name="type" value="Real estate financing">
-                                                    <input type="hidden" name="field" value="id_card">
-                                                    <label >
-
-                                                        <i class="icofont-cloud-upload" for="upload2_id_card"></i> Selecione o documento
-                                                        <input type="file" name="file" class="d-none upload_form_data" main_form="2" form_id="1" id="upload2_id_card">
-                                                        <i class="icofont-exclamation error-icon"></i>
-                                                    </label>
-                                                </form>
-                                            </div>
-
-                                        @else
-                                            <div class="file-details">
-                                                {{$estate->id_card}}
-                                                <i class="icofont-tick-mark" for="id_card"></i>
-                                            </div>
-                                        @endif
-                                    </div>
-                                </div>
 
 
                                 @if($estate)
@@ -186,36 +139,9 @@
                                     <input type="hidden" name="type" value="structured">
                                 </form>
 
-                                <div class="col-lg-6 col-md-12 col-12 mt-3">
-                                    <div class="display-msg-success d-flex justify-content-start align-items-center">
-                                        <h6 class="mb-0">ID CARD</h6>
+                                @include('dashboard.user.uploadComponent.estruucred')
 
 
-                                        @if(!isset($structured->id_card))
-
-
-                                            <div class="file-details-fail">
-                                                <form id="form3_1" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
-                                                    @csrf
-                                                    <input type="hidden" name="type" value="structured">
-                                                    <input type="hidden" name="field" value="id_card">
-                                                    <label >
-
-                                                        <i class="icofont-cloud-upload" for="upload3_id_card"></i> Selecione o documento
-                                                        <input type="file" name="file" class="d-none upload_form_data" main_form="3" form_id="1" id="upload3_id_card">
-                                                        <i class="icofont-exclamation error-icon"></i>
-                                                    </label>
-                                                </form>
-                                            </div>
-
-                                        @else
-                                            <div class="file-details">
-                                                {{$structured->id_card}}
-                                                <i class="icofont-tick-mark" for="id_card"></i>
-                                            </div>
-                                        @endif
-                                    </div>
-                                </div>
 
 
                                 @if($structured)
@@ -301,6 +227,17 @@
             var main=$(this).attr('main_form');
              $('#form'+main+'_'+form_id).submit();
         });
+
+        $('.tabclick').click(function () {
+            $('.tabclick').removeClass('activeTab');
+            $('.tabclick').addClass('text-dark');
+            $(this).removeClass('text-dark');
+            $(this).addClass('activeTab');
+            $('.tabclick').parent().parent().removeClass('activeTab2');
+            $(this).parent().parent().addClass('activeTab2');
+
+
+        })
 
 
     </script>
