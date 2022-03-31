@@ -18,6 +18,13 @@ use Illuminate\Testing\Fluent\Concerns\Has;
 
 class AdminController extends Controller
 {
+    public function markasRead()
+    {
+        $not=\App\Models\notification::where('to',\Auth::user()->id)->update(['read'=>1]);
+       // dd(Auth::user()->id);
+        return back();
+    }
+
     public function dashboard()
     {
 
@@ -63,7 +70,7 @@ return redirect($not->url);
         }
 
         $user->save();
-        return back()->with('success', 'profile updated successfully');
+        return back()->with('success', 'Profile updated successfully');
     }
 
     public function passwordUpdate(Request $request)
@@ -84,7 +91,7 @@ return redirect($not->url);
                 $user->fill([
                     'password' => \Hash::make($request->password)
                 ])->save();
-                return back()->with('success', 'password updated successfully');
+                return back()->with('success', 'Password updated successfully');
 
             } else {
                 return back()->with('error', 'Password does not match');
@@ -104,7 +111,7 @@ return redirect($not->url);
     public function userDelete($id)
     {
         $users = User::find($id)->delete();
-        return back()->with('success', 'user deleted successfully');
+        return back()->with('success', 'User deleted successfully');
     }
 
     public function loan()
@@ -269,7 +276,7 @@ return view('dashboard.common.comment',compact('loanadd'));
         $company = new companies();
         $company->name = $request->name;
         $company->save();
-        return back()->with('success', 'company added successfully');
+        return back()->with('success', 'Company added successfully');
 
     }
 
@@ -287,7 +294,7 @@ return view('dashboard.common.comment',compact('loanadd'));
     public function CompanyDelete($id)
     {
         $users = companies::find($id)->delete();
-        return back()->with('success', 'company deleted successfully');
+        return back()->with('success', 'Company deleted successfully');
     }
 
     public function history()
@@ -353,8 +360,6 @@ return view('dashboard.common.comment',compact('loanadd'));
             $report->file=$filename;
             $report->save();
             return back()->with('success','Report save successfully');
-
-
 
         }
 

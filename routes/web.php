@@ -114,3 +114,4 @@ Route::get('logout',function (){
 Route::get('notification/{id}',[\App\Http\Controllers\AdminController::class,'notification']);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/mark/as/read', [App\Http\Controllers\AdminController::class, 'markasRead']);

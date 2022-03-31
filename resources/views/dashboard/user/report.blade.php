@@ -24,7 +24,7 @@
 
             <div class="row">
 
-                @foreach($report as $report)
+                @forelse($report as $report)
                     <div class="col-lg-6">
                         <div class="report-card mt-4 d-flex align-items-center">
                             <img src="{{asset('assets/dashboard/img/doc file.png')}}" alt="alt-file">
@@ -38,7 +38,16 @@
 
                         </div>
                     </div>
-                @endforeach
+
+                @empty
+                    <div class="row w-100  ">
+                        <div class="col-lg-12 d-flex justify-content-center align-items-center" style="height:50vh">
+                            <img src="{{asset('assets/dashboard/banner/norecord.png')}}" class="" alt="">
+                        </div>
+                    </div>
+
+
+                @endforelse
 
 
 

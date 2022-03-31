@@ -33,7 +33,7 @@
             transform: translateX(-60%) !important;
             top: 50px !important;
             width: 300px;
-            height: 250px;
+            max-height: 250px;
             overflow: auto;
         }
         .no-msg-not{
@@ -228,11 +228,23 @@
                                 </div>
                             @endif
                             <div class="dropdown-menu not-drop" aria-labelledby="dropdownMenuButton" style="">
-                                <h3 class="text-center">Notification</h3>
-                              @foreach($notifications['notifications'] as $not)
-                                    <a class="dropdown-item " style="white-space: break-spaces;" href="{{url('notification/'.$not->id.'')}}">{{$not->notification}}</a>
-                                    <hr>
-                              @endforeach
+
+
+                                  <h3 class="text-center">Notification</h3>
+                                  @foreach($notifications['notifications'] as $not)
+                                      <a class="dropdown-item " style="white-space: break-spaces;" href="{{url('notification/'.$not->id.'')}}">{{$not->notification}}</a>
+                                      <hr>
+                                  @endforeach
+
+                                @if(count($notifications['notifications'])>=1)
+
+
+                                  <div class="w-100 " style="position: sticky;bottom: -8px;background: #d2cece">
+                                      <h5 class="text-center"><a href="{{url('mark/as/read')}}">Mark all as read</a></h5>
+                                  </div>
+                                @endif
+
+
 
 
                             </div>

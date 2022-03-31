@@ -23,11 +23,11 @@ active
             <div class="row justify-content-center ">
                 <div class="col-lg-9 col-11 p-0 my-5">
                     <div class="welcom-note py-3 px-2 ">
-                        <p>Seja bem vindo ao novo Dashboard! Precisa de ajuda? <a href="#">Clique aqui!</a> </p>
+                        <p>Seja bem vindo ao novo Dashboard! </p>
                     </div>
 
-                    <div class=" mt-4">
-                        <img style="border-radius: 20px" src="{{asset('assets/dashboard/banner/'.$banner->image.'')}}" class="w-100" alt="">
+                    <div class="w-100 mt-4 d-flex justify-content-center">
+                        <img style="border-radius: 20px" src="{{asset('assets/dashboard/banner/'.$banner->image.'')}}" class="img-fluid" alt="">
                     </div>
                     <!--black-div end-->
 

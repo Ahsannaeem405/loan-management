@@ -25,7 +25,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
       \View::composer('dashboard.layout.main', function($view) {
-            $notifications = \App\Models\notification::where('to',\Auth::user()->id)->where('read',0)->get();
+            $notifications = \App\Models\notification::where('to',\Auth::user()->id)->where('read',0)->orderBy('id','desc')->get();
 
             $view->with('notifications', array('notifications' => $notifications));
         });
