@@ -108,7 +108,7 @@
                 <li class="nav-item">
                     <a class="nav-link @yield('history')" href="{{url('user/history')}}"> <img
                             src="{{asset('assets/dashboard/img/history.png')}}" alt="dashboard-icon" class="menu-icon">
-                        History</a>
+                        Histórico</a>
                 </li>
 
                 <li class="nav-item">
@@ -133,20 +133,20 @@
 
                 <li class="nav-item">
                     <a class="nav-link @yield('user')" href="{{url('admin/user')}}"> <i class="fa fa-user"></i>
-                        Users</a>
+                        Usuários</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link @yield('companies')" href="{{url('admin/companies')}}"> <img
                             src="{{asset('assets/dashboard/img/bx_link.png')}}"
                             alt="dashboard-icon" class="menu-icon">
-                        Companies</a>
+                        Tomadores</a>
                 </li>
 
                 <li class="nav-item">
                     <a class="nav-link @yield('loan')" href="{{url('admin/loan')}}"> <img
                             src="{{asset('assets/dashboard/img/status.png')}}"
                             alt="dashboard-icon" class="menu-icon">
-                        Loan Status</a>
+                         Status</a>
                 </li>
 
 
@@ -160,7 +160,7 @@
                 <li class="nav-item">
                     <a class="nav-link @yield('history')" href="{{url('admin/history')}}"> <img
                             src="{{asset('assets/dashboard/img/history.png')}}" alt="dashboard-icon" class="menu-icon">
-                        History</a>
+                        Histórico</a>
                 </li>
 
                 <li class="nav-item">
@@ -172,7 +172,7 @@
                 <li class="nav-item">
                     <a class="nav-link @yield('report')" href="{{url('admin/report')}}"> <img
                             src="{{asset('assets/dashboard/img/history.png')}}" alt="dashboard-icon" class="menu-icon">
-                        Report</a>
+                        Relatórios</a>
                 </li>
 
                 <li class="nav-item">

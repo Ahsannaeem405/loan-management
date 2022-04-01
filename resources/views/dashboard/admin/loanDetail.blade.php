@@ -237,11 +237,11 @@
                                     <table class="table table-responsive d-table" style="width: 100% !important;">
                                         <thead>
                                         <tr>
-                                            <th scope="col">Name</th>
+                                            <th scope="col">Nome</th>
                                             <th scope="col">Modalidade</th>
                                             <th scope="col">Tipo</th>
                                             <th scope="col">Valor do credito</th>
-                                            <th scope="col">Action</th>
+                                            <th scope="col">Atividade</th>
                                         </tr>
                                         </thead>
                                         <tbody id="append">
@@ -325,7 +325,7 @@
                                                             {{count($com->comment)}}
                                                         </div>
                                                     </td>
-                                                    <td>{{$com->category}}</td>
+                                                    <td>{{$loan->type}}</td>
                                                     <td>{{$com->type}}</td>
                                                     <td>{{$com->price}}</td>
                                                     <td class="loan-status">

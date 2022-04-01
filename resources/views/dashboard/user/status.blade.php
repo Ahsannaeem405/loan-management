@@ -167,7 +167,7 @@
                                         <table class="table table-borderless">
                                             <thead>
                                             <tr>
-                                                <th class="table-heading" colspan="3">Home equity</th>
+                                                <th class="table-heading" colspan="3">Crédito com Garantia de Imóvel</th>
 
                                                 <th>Modalidade</th>
                                                 <th>Tipo</th>
@@ -208,7 +208,7 @@
                                                             </div>
                                                         </a>
                                                     </td>
-                                                    <td>{{$equity->category}}</td>
+                                                    <td>{{'Crédito com Garantia de Imóvel'}}</td>
                                                     <td>{{$equity->type}}</td>
                                                     <td>{{$equity->price}}</td>
                                                     <td class="loan-status
@@ -328,7 +328,7 @@
 
                         <div class="row">
                             <div class="col-12">
-                                <div class="status-table  real-estate mt-4">
+                                <div class="status-table  Estruturada mt-4">
                                     <div class="table-icons my-2 mx-2">
                                         <i class="icofont-caret-down"></i>
                                     </div>

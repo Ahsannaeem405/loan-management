@@ -40,9 +40,9 @@
                     </div>
 
                 @empty
-                    <div class="row w-100  ">
-                        <div class="col-lg-12 d-flex justify-content-center align-items-center" style="height:50vh">
-                            <img src="{{asset('assets/dashboard/banner/norecord.png')}}" class="" alt="">
+                    <div class="row w-100  d-flex justify-content-center">
+                        <div class="col-lg-6 d-flex justify-content-center align-items-center" style="">
+                            <img src="{{asset('assets/dashboard/banner/norecord.jpg')}}" class="w-100" alt="">
                         </div>
                     </div>
 

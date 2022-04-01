@@ -22,8 +22,19 @@
 
 
                             <div class="col-lg-12 ">
-                                <lable class="label">Company Name</lable>
+                                <lable class="label">Tomador</lable>
                                 <input type="text" class="form-control" name="name" required>
+                            </div>
+
+                            <div class="col-lg-12 ">
+                                <lable class="label">Valor solicitado</lable>
+                                <input type="text" class="form-control" name="credit" required>
+                            </div>
+
+
+                            <div class="col-lg-12 ">
+                                <lable class="label">Modalidade</lable>
+                                <input type="text" class="form-control" name="type" required>
                             </div>
 
 
@@ -72,8 +83,10 @@
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th>Name</th>
-                            <th>Action</th>
+                            <th>Tomador</th>
+                            <th>Valor solicitado</th>
+                            <th>Modalidade</th>
+                            <th>Atividade</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -82,6 +95,8 @@
                             <tr>
                                 <td>{{$companie->id}}</td>
                                 <td>{{$companie->name}}</td>
+                                <td>{{$companie->credit}}</td>
+                                <td>{{$companie->type}}</td>
 
                                 <td>
                                     <a href="{{url('admin/company/delete/'.$companie->id.'')}}" onclick="return confirm('Are you sure you want to delete this company?');"> <i style="color: red" class="fa fa-trash"></i></a>
@@ -107,8 +122,18 @@
 
 
                                                     <div class="col-lg-12 ">
-                                                        <lable class="label">Company Name</lable>
+                                                        <lable class="label">Tomador</lable>
                                                         <input type="text" class="form-control" name="name" value="{{$companie->name}}" required>
+                                                    </div>
+                                                    <div class="col-lg-12 ">
+                                                        <lable class="label">Valor solicitado</lable>
+                                                        <input type="text" class="form-control" value="{{$companie->credit}}" name="credit" required>
+                                                    </div>
+
+
+                                                    <div class="col-lg-12 ">
+                                                        <lable class="label">Modalidade</lable>
+                                                        <input type="text" class="form-control" value="{{$companie->type}}" name="type" required>
                                                     </div>
 
 

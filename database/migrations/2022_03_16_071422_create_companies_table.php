@@ -16,6 +16,8 @@ class CreateCompaniesTable extends Migration
         Schema::create('companies', function (Blueprint $table) {
             $table->id();
             $table->text('name')->nullable();
+            $table->text('credit')->nullable();
+            $table->text('type')->nullable();
             $table->timestamps();
         });
     }

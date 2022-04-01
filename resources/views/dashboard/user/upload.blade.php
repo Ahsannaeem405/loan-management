@@ -31,20 +31,20 @@
                                     <div sec="1"
                                          class="upload-btn active py-4 d-flex align-items-center justify-content-center">
                                         <i class="icofont-home"></i>
-                                        Home Equity
+                                        Crédito com Garantia de Imóvel
                                     </div>
                                 </div>
                                 <div class="col-lg-3 mt-3">
                                     <div sec="2"
                                          class="upload-btn py-4 d-flex align-items-center justify-content-center">
-                                        <i class="icofont-ui-folder"></i>
+                                        <img src="{{asset('assets/dashboard/img/hand.png')}}" width="30" height="30" alt="">
                                         Financiamento
                                     </div>
                                 </div>
                                 <div class="col-lg-3 mt-3">
                                     <div sec="3"
                                          class="upload-btn py-4 d-flex align-items-center justify-content-center">
-                                        <i class="icofont-ui-folder"></i>
+                                        <img src="{{asset('assets/dashboard/img/puzzle.png')}}" width="30" height="30" alt="">
                                         Estruturada
                                     </div>
                                 </div>

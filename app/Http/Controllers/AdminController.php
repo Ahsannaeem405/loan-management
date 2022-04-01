@@ -148,7 +148,7 @@ return redirect($not->url);
         {
             $loanAdd=new loanApplyCompany();
             $loanAdd->name=$request->name[$i];
-            $loanAdd->category=$request->cat[$i];
+            $loanAdd->category=$request->cat[$i]=='Crédito com Garantia de Imóvel' ?  'Home equity'  : $request->cat[$i];
             $loanAdd->type=$request->type[$i];
             $loanAdd->price=$request->price[$i];
             $loanAdd->loan_id=$id->id;
@@ -275,6 +275,8 @@ return view('dashboard.common.comment',compact('loanadd'));
     {
         $company = new companies();
         $company->name = $request->name;
+        $company->credit = $request->credit;
+        $company->type = $request->type;
         $company->save();
         return back()->with('success', 'Company added successfully');
 
@@ -285,6 +287,8 @@ return view('dashboard.common.comment',compact('loanadd'));
     {
         $company = companies::find($id);
         $company->name = $request->name;
+        $company->credit = $request->credit;
+        $company->type = $request->type;
         $company->save();
         return back()->with('success', 'company updated successfully');
 

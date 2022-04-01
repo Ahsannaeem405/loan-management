@@ -28,9 +28,9 @@
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Action</th>
+                            <th>Nome</th>
+                            <th> E-mail</th>
+                            <th>Atividade</th>
                         </tr>
                         </thead>
                         <tbody>

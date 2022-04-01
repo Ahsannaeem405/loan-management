@@ -34,7 +34,7 @@
                             </div>
                         </div>
                         <p class="mt-5">
-                            Compartilhe esse link para ganhar <span> 10%</span> <br> da primeira operação do seu afiliado!
+                            Compartilhe esse link para ganhar <span> 5%</span> <br> da primeira operação do seu afiliado!
                         </p>
                         <div class="affilate-img text-center mt-4">
                             <img src="{{asset('assets/dashboard/img/Moneyverse.png')}}" alt="" class="mx-auto img-fluid">

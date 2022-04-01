@@ -47,4 +47,18 @@ class loan extends Model
     {
         return $this->hasMany(loanApplyCompany::class);
     }
+
+    public function getTypeAttribute($value)
+    {
+if ($value=='Home equity')
+{
+    return 'Crédito com Garantia de Imóvel';
+}
+else{
+    return $value;
+}
+    }
+
+
+
 }
