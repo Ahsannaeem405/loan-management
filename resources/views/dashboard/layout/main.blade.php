@@ -9,7 +9,8 @@
     <!-- Style -->
     <link rel="stylesheet" href="{{asset('assets/dashboard/css/home.css')}}">
     <!-- bootstrap css -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <link rel="stylesheet" href="{{asset('assets/dashboard/fonts/icofont/icofont.min.css')}}">
 
@@ -21,7 +22,6 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
 
 
-
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,14 +29,16 @@
     <title>Dashboard</title>
 
     <style>
-        .not-drop{
+        .not-drop {
             transform: translateX(-60%) !important;
             top: 50px !important;
             width: 300px;
             max-height: 250px;
             overflow: auto;
+            padding-bottom: 0px !important;
         }
-        .no-msg-not{
+
+        .no-msg-not {
             position: absolute;
             width: 15px;
             height: 15px;
@@ -133,15 +135,17 @@
                     <a class="nav-link @yield('user')" href="{{url('admin/user')}}"> <i class="fa fa-user"></i>
                         Users</a>
                 </li>
-                    <li class="nav-item">
-                        <a class="nav-link @yield('companies')" href="{{url('admin/companies')}}"> <img src="{{asset('assets/dashboard/img/bx_link.png')}}"
-                                                            alt="dashboard-icon" class="menu-icon">
-                            Companies</a>
-                    </li>
+                <li class="nav-item">
+                    <a class="nav-link @yield('companies')" href="{{url('admin/companies')}}"> <img
+                            src="{{asset('assets/dashboard/img/bx_link.png')}}"
+                            alt="dashboard-icon" class="menu-icon">
+                        Companies</a>
+                </li>
 
                 <li class="nav-item">
-                    <a class="nav-link @yield('loan')" href="{{url('admin/loan')}}"> <img src="{{asset('assets/dashboard/img/status.png')}}"
-                                                        alt="dashboard-icon" class="menu-icon">
+                    <a class="nav-link @yield('loan')" href="{{url('admin/loan')}}"> <img
+                            src="{{asset('assets/dashboard/img/status.png')}}"
+                            alt="dashboard-icon" class="menu-icon">
                         Loan Status</a>
                 </li>
 
@@ -153,23 +157,23 @@
                         Meu Perfil</a>
                 </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link @yield('history')" href="{{url('admin/history')}}"> <img
-                                src="{{asset('assets/dashboard/img/history.png')}}" alt="dashboard-icon" class="menu-icon">
-                            History</a>
-                    </li>
+                <li class="nav-item">
+                    <a class="nav-link @yield('history')" href="{{url('admin/history')}}"> <img
+                            src="{{asset('assets/dashboard/img/history.png')}}" alt="dashboard-icon" class="menu-icon">
+                        History</a>
+                </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link @yield('banner')" href="{{url('admin/banner')}}"> <img
-                                src="{{asset('assets/dashboard/img/history.png')}}" alt="dashboard-icon" class="menu-icon">
-                            Banner</a>
-                    </li>
+                <li class="nav-item">
+                    <a class="nav-link @yield('banner')" href="{{url('admin/banner')}}"> <img
+                            src="{{asset('assets/dashboard/img/history.png')}}" alt="dashboard-icon" class="menu-icon">
+                        Banner</a>
+                </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link @yield('report')" href="{{url('admin/report')}}"> <img
-                                src="{{asset('assets/dashboard/img/history.png')}}" alt="dashboard-icon" class="menu-icon">
-                            Report</a>
-                    </li>
+                <li class="nav-item">
+                    <a class="nav-link @yield('report')" href="{{url('admin/report')}}"> <img
+                            src="{{asset('assets/dashboard/img/history.png')}}" alt="dashboard-icon" class="menu-icon">
+                        Report</a>
+                </li>
 
                 <li class="nav-item">
                     <a class="nav-link " href="{{url('logout')}}"> <img
@@ -207,54 +211,55 @@
                 <div class="col-md-6 col-12 p-0">
 
 
-
                     <div class="profile-side d-flex  align-items-center justify-content-end mt-3 mt-md-0">
 
 
                         <div style="position:relative;">
-                        <div class="dropdown"  >
-                            <svg class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="25"
-                                 height="30">
-                                <path fill="none" d="M0 0h24v24H0z"/>
-                                <path fill="#fff"
-                                      d="M20 17h2v2H2v-2h2v-7a8 8 0 1 1 16 0v7zM9 21h6v2H9v-2z"/>
-                            </svg>
+                            <div class="dropdown">
+                                <svg class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown"
+                                     aria-haspopup="true" aria-expanded="false" xmlns="http://www.w3.org/2000/svg"
+                                     viewBox="0 0 24 24" width="25"
+                                     height="30">
+                                    <path fill="none" d="M0 0h24v24H0z"/>
+                                    <path fill="#fff"
+                                          d="M20 17h2v2H2v-2h2v-7a8 8 0 1 1 16 0v7zM9 21h6v2H9v-2z"/>
+                                </svg>
 
 
-
-                            @if(count($notifications['notifications'])!=0)
-                                <div class="no-msg-not">
-                                    {{count($notifications['notifications'])}}
-                                </div>
-                            @endif
-                            <div class="dropdown-menu not-drop" aria-labelledby="dropdownMenuButton" style="">
-
-
-                                  <h3 class="text-center">Notification</h3>
-                                  @foreach($notifications['notifications'] as $not)
-                                      <a class="dropdown-item " style="white-space: break-spaces;" href="{{url('notification/'.$not->id.'')}}">{{$not->notification}}</a>
-                                      <hr>
-                                  @endforeach
-
-                                @if(count($notifications['notifications'])>=1)
-
-
-                                  <div class="w-100 " style="position: sticky;bottom: -8px;background: #d2cece">
-                                      <h5 class="text-center"><a href="{{url('mark/as/read')}}">Mark all as read</a></h5>
-                                  </div>
+                                @if(count($notifications['notifications'])!=0)
+                                    <div class="no-msg-not">
+                                        {{count($notifications['notifications'])}}
+                                    </div>
                                 @endif
+                                <div class="dropdown-menu not-drop" aria-labelledby="dropdownMenuButton" style="">
 
 
+                                    <h6 class="text-center">Notificações</h6>
+                                    @foreach($notifications['notifications'] as $not)
+                                        <a class="dropdown-item " style="white-space: break-spaces;"
+                                           href="{{url('notification/'.$not->id.'')}}">{{$not->notification}}</a>
+                                        <hr>
+                                    @endforeach
+
+                                    @if(count($notifications['notifications'])>=1)
 
 
+                                        <div class="w-100 p-2"
+                                             style="position: sticky;bottom: -8px;background: #e8e2e2">
+                                            <h6 class="text-center"><a href="{{url('mark/as/read')}}">Mark all as
+                                                    read</a></h6>
+                                        </div>
+                                    @endif
+
+
+                                </div>
                             </div>
                         </div>
-                        </div>
 
 
-                        <img
-                            src="{{asset('assets/dashboard/profile/'.Auth::user()->profile.'')}}"
-                            alt="user-img" class="user-img">
+                        <a href="{{url(Auth::user()->role=='user' ? 'user/myprofile' : 'admin/myprofile')}}"> <img
+                                src="{{asset('assets/dashboard/profile/'.Auth::user()->profile.'')}}"
+                                alt="user-img" class="user-img"></a>
                     </div>
                 </div>
             </div>
@@ -269,14 +274,18 @@
 </div>
 
 
-
-
 <!-- Bootstrap js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 <script type="text/javascript" charset="utf8"
         src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
 

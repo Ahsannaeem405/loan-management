@@ -4,12 +4,6 @@
 @endsection
 @section('content')
 
-
-
-
-
-
-
     <!-- page body Start -->
     <section class="page-section">
         <div class="container-fluid">
