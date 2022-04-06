@@ -117,7 +117,7 @@ return redirect($not->url);
     public function loan()
     {
 
-        $loans = loan::orderBy('id', "DESC")->get();
+        $loans = loan::orderBy('id', "DESC")->where('status',1)->get();
         return view('dashboard.admin.loan', compact('loans'));
     }
 

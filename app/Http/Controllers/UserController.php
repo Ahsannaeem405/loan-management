@@ -32,7 +32,9 @@ class UserController extends Controller
 //        dd($data2[0]);
         $i = $j =$k= 1;
         $equity = loan::where('user_id', \Auth::user()->id)->where('type', 'Home equity')->with('equity')->first();
+        
         $estate = loan::where('user_id', \Auth::user()->id)->where('type', 'Real estate financing')->with('estate')->first();
+        
         $structured = loan::where('user_id', \Auth::user()->id)->where('type', 'structured')->with('structured')->first();
 
 
@@ -142,5 +144,35 @@ class UserController extends Controller
 
         return view('dashboard.common.history', compact('equity', 'estate', 'pending', 'unfit', 'dpending', 'analysis', 'resolution', 'finished'));
     }
-
+public function applyDocument(Request $request){
+    // return $request->all();
+    
+    if($request->type==1){
+       $update=loan::where('user_id',auth()->user()->id)->where('type','Home equity')->update([
+'status'=>1,
+'add_type'=>$request->add_type,
+'add_amount'=>$request->add_amount,
+        ]);
+    }
+    elseif($request->type==2){
+        $update=loan::where('user_id',auth()->user()->id)->where('type','Real estate financing')->update([
+'status'=>1,
+'add_type'=>$request->add_type,
+'add_amount'=>$request->add_amount,
+        ]);
+    }
+    elseif($request->type==3){
+        $update=loan::where('user_id',auth()->user()->id)->where('type','structured')->update([
+'status'=>1,
+'add_type'=>$request->add_type,
+'add_amount'=>$request->add_amount,
+        ]);
+    }
+   if($update==0)
+   {
+    return back()->with('error', 'Plese Upload Document First');
+   }else{
+    return back()->with('success', 'Apply successfully');
+   }
+}
 }

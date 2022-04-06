@@ -78,14 +78,34 @@
                                     @endforeach
 
                                 @endif
-
+                                
+    <form action="{{route('document', ["type" => "1"])}}" method="post" class="w-100">
+        @csrf
+ <div class="col-md-12 col-lg-12 my-2">                              
+<div class="row">
+    <div class="col-md-6 col-lg-6">
+        <label>Valor total do crédito</label>
+<input type="text" class="form-control" name="add_type" value="{{isset($equity->add_type) ? $equity->add_type : ""}}">
+    </div>
+    <div class="col-md-6 col-lg-6">
+        <label>Finalidade do crédito</label>
+        <input type="text" class="form-control" name="add_amount" value="{{isset($equity->add_amount) ? $equity->add_amount : ""}}">
+    </div>
+</div>
+ </div>
                                 <div class="col-lg-12 text-center my-5">
                                     <button class="btn btn-primary upload1"><i class="fa fa-plus"></i> Adicionar novo
                                     </button>
                                 </div>
-
+                                <div class="col-lg-12 text-center my-1">
+                                   {{-- <a href="{{route('document', ["type" => "1"])}}"> <button class="btn btn-primary "></i> Apply Now
+                                    </button></a> --}}
+                                <input type="submit" class="btn btn-primary" Value="Apply Now">
+                                </div>
+    
 
                             </div>
+                        </form>
                             <div class="row mt-4 div2 " style="display: none">
                                 <form id="form2" action="{{url('user/upload/loan')}}" method="post"
                                       enctype="multipart/form-data">
@@ -118,12 +138,33 @@
 
                                 @endif
 
-                                <div class="col-lg-12 text-center my-5">
-                                    <button class="btn btn-primary upload2"><i class="fa fa-plus"></i> Adicionar novo
-                                    </button>
+                                <form action="{{route('document', ["type" => "2"])}}" method="post" class="w-100">
+                                    @csrf
+                             <div class="col-md-12 col-lg-12 my-2">                              
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6">
+                                    <label>Valor total do crédito</label>
+                            <input type="text" class="form-control" name="add_type" value="{{isset($estate->add_type) ? $estate->add_type : ""}}">
                                 </div>
-
+                                <div class="col-md-6 col-lg-6">
+                                    <label>Finalidade do crédito</label>
+                                    <input type="text" class="form-control" name="add_amount"  value="{{isset($estate->add_amount) ? $estate->add_amount : ""}}">
+                                </div>
                             </div>
+                             </div>
+                                                            <div class="col-lg-12 text-center my-5">
+                                                                <button class="btn btn-primary upload2"><i class="fa fa-plus"></i> Adicionar novo
+                                                                </button>
+                                                            </div>
+                                                            <div class="col-lg-12 text-center my-1">
+                                                               {{-- <a href="{{route('document', ["type" => "1"])}}"> <button class="btn btn-primary "></i> Apply Now
+                                                                </button></a> --}}
+                                                            <input type="submit" class="btn btn-primary" Value="Apply Now">
+                                                            </div>
+                                
+                            
+                                                        </div>
+                                                    </form>
 
                             <div class="row mt-4 div3 " style="display: none">
                                 <form id="form3" action="{{url('user/upload/loan')}}" method="post"
@@ -154,12 +195,34 @@
 
                                 @endif
 
-                                <div class="col-lg-12 text-center my-5">
-                                    <button class="btn btn-primary upload3"><i class="fa fa-plus"></i> Adicionar novo
-                                    </button>
+                                <form action="{{route('document', ["type" => "3"])}}" method="post" class="w-100">
+                                    @csrf
+                             <div class="col-md-12 col-lg-12 my-2">                              
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6">
+                                    <label>Valor total do crédito</label>
+                            <input type="text" class="form-control" name="add_type"  value="{{isset($structured->add_type) ? $structured->add_type : ""}}" >
                                 </div>
-
+                                <div class="col-md-6 col-lg-6">
+                                    <label>Finalidade do crédito</label>
+                                    <input type="text" class="form-control" name="add_amount" value="{{isset($structured->add_amount) ? $structured->add_amount : ""}}">
+                                </div>
                             </div>
+                             </div>
+                                                            <div class="col-lg-12 text-center my-5">
+                                                                <button class="btn btn-primary upload3"><i class="fa fa-plus"></i> Adicionar novo
+                                                                </button>
+                                                            </div>
+                                                            <div class="col-lg-12 text-center my-1">
+                                                               {{-- <a href="{{route('document', ["type" => "1"])}}"> <button class="btn btn-primary "></i> Apply Now
+                                                                </button></a> --}}
+                                                            <input type="submit" class="btn btn-primary" Value="Apply Now">
+                                                            </div>
+                                
+                            
+                                                        </div>
+                                                    </form>
+                            
                         </div>
                     </div>
                 </div>

@@ -417,11 +417,13 @@
                 {{--                --}}
                 var val = $(this).val();
                 var type = "{{$loan->type}}";
+                var add_type="{{$loan->add_type}}";
+                var add_amount="{{$loan->add_amount}}";
                 var html = '<tr>' +
                     ' <th scope="row"><input type="text" readonly name="name[]" class="form-control" value="' + val + '"></th>' +
                     ' <td><input  type="text" name="cat[]" readonly class="form-control" value="' + type + '"></td>' +
-                    ' <td><input class="form-control" required  name="type[]" type="text"></td>' +
-                    ' <td><input class="form-control" required name="price[]" type="text"></td>' +
+                    ' <td><input class="form-control" required  name="type[]" type="text" value="' + add_type + '"></td>' +
+                    ' <td><input class="form-control" required name="price[]" type="text" value="' + add_amount + '"></td>' +
                     ' <td><i class="fa fa-trash text-danger remove_tr"></i></td>' +
                     '</tr>';
                 $('#append').append(html);

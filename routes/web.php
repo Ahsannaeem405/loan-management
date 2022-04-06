@@ -95,7 +95,7 @@ Route::prefix('user')->middleware(['auth','user'])->group(function () {
     Route::get('comment/{id}',[\App\Http\Controllers\AdminController::class,'viewComment']);
     Route::post('comment/send/{id}',[\App\Http\Controllers\AdminController::class,'sendComment']);
     Route::post('document/send/{id}',[\App\Http\Controllers\AdminController::class,'sendDocument']);
-    Route::get('loan/doc/{id}',[\App\Http\Controllers\UserController::class,'loanDocument']);
+    Route::post('apply/document/',[\App\Http\Controllers\UserController::class,'applyDocument'])->name("document");
 
 
     //refrel
