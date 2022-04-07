@@ -130,9 +130,9 @@ return redirect($not->url);
 
     public function loanDetail($id)
     {
+      
         $i=1;
-        $loan=loan::with('document','applyCom')->find($id);
-
+        $loan=loan::with('document','applyCom')->find($id);   
         $companies=companies::all();
         return view('dashboard.admin.loanDetail',compact('loan','companies','i'));
     }

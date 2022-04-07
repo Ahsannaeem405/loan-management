@@ -145,7 +145,7 @@ class UserController extends Controller
         return view('dashboard.common.history', compact('equity', 'estate', 'pending', 'unfit', 'dpending', 'analysis', 'resolution', 'finished'));
     }
 public function applyDocument(Request $request){
-    // return $request->all();
+    
     
     if($request->type==1){
        $update=loan::where('user_id',auth()->user()->id)->where('type','Home equity')->update([
@@ -168,6 +168,7 @@ public function applyDocument(Request $request){
 'add_amount'=>$request->add_amount,
         ]);
     }
+   
    if($update==0)
    {
     return back()->with('error', 'Plese Upload Document First');

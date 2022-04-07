@@ -20,13 +20,13 @@
 
                            
 
-                            @if(!isset($equity->doc3_1))
+                            @if(!isset($structured->doc3_1))
 
 
                                 <div class="file-details-fail">
                                     <form id="form3_1" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="structured">
                                         <input type="hidden" name="field" value="doc3_1">
                                         <label >
 
@@ -39,7 +39,7 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc3_1}}
+                                    {{$structured->doc3_1}}
                                     <i class="icofont-tick-mark" for="doc3_1"></i>
                                 </div>
                             @endif
@@ -52,13 +52,13 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
                            
-                            @if(!isset($equity->doc3_2))
+                            @if(!isset($structured->doc3_2))
 
 
                                 <div class="file-details-fail">
                                     <form id="form3_2" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="structured">
                                         <input type="hidden" name="field" value="doc3_2">
                                         <label >
 
@@ -71,7 +71,7 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc3_2}}
+                                    {{$structured->doc3_2}}
                                     <i class="icofont-tick-mark" for="doc3_2"></i>
                                 </div>
                             @endif
@@ -84,13 +84,13 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
                           
 
-                            @if(!isset($equity->doc3_3))
+                            @if(!isset($structured->doc3_3))
 
 
                                 <div class="file-details-fail">
                                     <form id="form3_3" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="structured">
                                         <input type="hidden" name="field" value="doc3_3">
                                         <label >
 
@@ -103,7 +103,7 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc3_3}}
+                                    {{$structured->doc3_3}}
                                     <i class="icofont-tick-mark" for="doc3_3"></i>
                                 </div>
                             @endif
@@ -128,13 +128,13 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc1_2))
+                            @if(!isset($structured->doc1_2))
 
 
                                 <div class="file-details-fail">
                                     <form id="form1_2" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="structured">
                                         <input type="hidden" name="field" value="doc1_2">
                                         <label >
 
@@ -147,7 +147,7 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc1_2}}
+                                    {{$structured->doc1_2}}
                                     <i class="icofont-tick-mark" for="doc1_2"></i>
                                 </div>
                             @endif
@@ -170,13 +170,13 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc1_3))
+                            @if(!isset($structured->doc1_3))
 
 
                                 <div class="file-details-fail">
                                     <form id="form1_3" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="structured">
                                         <input type="hidden" name="field" value="doc1_3">
                                         <label >
 
@@ -189,7 +189,7 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc1_3}}
+                                    {{$structured->doc1_3}}
                                     <i class="icofont-tick-mark" for="doc1_3"></i>
                                 </div>
                             @endif
@@ -216,13 +216,13 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc3_4))
+                            @if(!isset($structured->doc3_4))
 
 
                                 <div class="file-details-fail">
                                     <form id="form3_4" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="structured">
                                         <input type="hidden" name="field" value="doc3_4">
                                         <label >
 
@@ -235,7 +235,7 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc3_4}}
+                                    {{$structured->doc3_4}}
                                     <i class="icofont-tick-mark" for="doc3_4"></i>
                                 </div>
                             @endif
@@ -249,13 +249,13 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc3_5))
+                            @if(!isset($structured->doc3_5))
 
 
                                 <div class="file-details-fail">
                                     <form id="form3_5" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="structured">
                                         <input type="hidden" name="field" value="doc3_5">
                                         <label >
 
@@ -268,7 +268,7 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc3_5}}
+                                    {{$structured->doc3_5}}
                                     <i class="icofont-tick-mark" for="doc3_5"></i>
                                 </div>
                             @endif
@@ -282,13 +282,13 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc3_6))
+                            @if(!isset($structured->doc3_6))
 
 
                                 <div class="file-details-fail">
                                     <form id="form3_6" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="structured">
                                         <input type="hidden" name="field" value="doc3_6">
                                         <label >
 
@@ -301,7 +301,7 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc3_6}}
+                                    {{$structured->doc3_6}}
                                     <i class="icofont-tick-mark" for="doc3_6"></i>
                                 </div>
                             @endif
@@ -315,13 +315,13 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc3_7))
+                            @if(!isset($structured->doc3_7))
 
 
                                 <div class="file-details-fail">
                                     <form id="form3_7" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="structured">
                                         <input type="hidden" name="field" value="doc3_7">
                                         <label >
 
@@ -334,7 +334,7 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc3_7}}
+                                    {{$structured->doc3_7}}
                                     <i class="icofont-tick-mark" for="doc3_7"></i>
                                 </div>
                             @endif
@@ -348,13 +348,13 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc3_8))
+                            @if(!isset($structured->doc3_8))
 
 
                                 <div class="file-details-fail">
                                     <form id="form3_8" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="structured">
                                         <input type="hidden" name="field" value="doc3_8">
                                         <label >
 
@@ -367,7 +367,7 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc3_8}}
+                                    {{$structured->doc3_8}}
                                     <i class="icofont-tick-mark" for="doc3_8"></i>
                                 </div>
                             @endif
@@ -394,13 +394,13 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc3_9))
+                            @if(!isset($structured->doc3_9))
 
 
                                 <div class="file-details-fail">
                                     <form id="form3_9" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="structured">
                                         <input type="hidden" name="field" value="doc3_9">
                                         <label >
 
@@ -413,7 +413,7 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc3_9}}
+                                    {{$structured->doc3_9}}
                                     <i class="icofont-tick-mark" for="doc3_9"></i>
                                 </div>
                             @endif
@@ -427,13 +427,13 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc3_10))
+                            @if(!isset($structured->doc3_10))
 
 
                                 <div class="file-details-fail">
                                     <form id="form3_10" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="structured">
                                         <input type="hidden" name="field" value="doc3_10">
                                         <label >
 
@@ -446,7 +446,7 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc3_10}}
+                                    {{$structured->doc3_10}}
                                     <i class="icofont-tick-mark" for="doc3_10"></i>
                                 </div>
                             @endif
@@ -460,13 +460,13 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc3_11))
+                            @if(!isset($structured->doc3_11))
 
 
                                 <div class="file-details-fail">
                                     <form id="form3_11" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="structured">
                                         <input type="hidden" name="field" value="doc3_11">
                                         <label >
 
@@ -479,7 +479,7 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc3_11}}
+                                    {{$structured->doc3_11}}
                                     <i class="icofont-tick-mark" for="doc3_11"></i>
                                 </div>
                             @endif
@@ -493,13 +493,13 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc3_12))
+                            @if(!isset($structured->doc3_12))
 
 
                                 <div class="file-details-fail">
                                     <form id="form3_12" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="structured">
                                         <input type="hidden" name="field" value="doc3_12">
                                         <label >
 
@@ -512,7 +512,7 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc3_12}}
+                                    {{$structured->doc3_12}}
                                     <i class="icofont-tick-mark" for="doc3_12"></i>
                                 </div>
                             @endif
@@ -526,13 +526,13 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc3_13))
+                            @if(!isset($structured->doc3_13))
 
 
                                 <div class="file-details-fail">
                                     <form id="form3_13" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="structured">
                                         <input type="hidden" name="field" value="doc3_13">
                                         <label >
 
@@ -545,7 +545,7 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc3_13}}
+                                    {{$structured->doc3_13}}
                                     <i class="icofont-tick-mark" for="doc3_13"></i>
                                 </div>
                             @endif
@@ -559,13 +559,13 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc3_14))
+                            @if(!isset($structured->doc3_14))
 
 
                                 <div class="file-details-fail">
                                     <form id="form3_14" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="structured">
                                         <input type="hidden" name="field" value="doc3_14">
                                         <label >
 
@@ -578,7 +578,7 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc3_14}}
+                                    {{$structured->doc3_14}}
                                     <i class="icofont-tick-mark" for="doc3_14"></i>
                                 </div>
                             @endif
@@ -592,13 +592,13 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc3_15))
+                            @if(!isset($structured->doc3_15))
 
 
                                 <div class="file-details-fail">
                                     <form id="form3_15" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="structured">
                                         <input type="hidden" name="field" value="doc3_15">
                                         <label >
 
@@ -611,7 +611,7 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc3_15}}
+                                    {{$structured->doc3_15}}
                                     <i class="icofont-tick-mark" for="doc3_15"></i>
                                 </div>
                             @endif
@@ -625,13 +625,13 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc3_16))
+                            @if(!isset($structured->doc3_16))
 
 
                                 <div class="file-details-fail">
                                     <form id="form3_16" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="structured">
                                         <input type="hidden" name="field" value="doc3_16">
                                         <label >
 
@@ -644,7 +644,7 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc3_16}}
+                                    {{$structured->doc3_16}}
                                     <i class="icofont-tick-mark" for="doc3_16"></i>
                                 </div>
                             @endif
@@ -658,13 +658,13 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc3_17))
+                            @if(!isset($structured->doc3_17))
 
 
                                 <div class="file-details-fail">
                                     <form id="form3_17" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="structured">
                                         <input type="hidden" name="field" value="doc3_17">
                                         <label >
 
@@ -677,7 +677,7 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc3_17}}
+                                    {{$structured->doc3_17}}
                                     <i class="icofont-tick-mark" for="doc3_17"></i>
                                 </div>
                             @endif

@@ -26,7 +26,7 @@
 
                            
 
-                            @if(!isset($equity->doc1_1))
+                            @if(!isset($loan->doc1_1))
 
 
                                 <div class="file-details-fail">
@@ -36,8 +36,8 @@
                                         <input type="hidden" name="field" value="doc1_1">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc1_1"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="1" form_id="1" id="doc1_1">
+                                             Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="1" form_id="1" id="doc1_1">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -45,9 +45,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc1_1}}
+                                    {{$loan->doc1_1}}
                                     <i class="icofont-tick-mark" for="doc1_1"></i>
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc1_1.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
                         </div>
                     </div>
@@ -58,7 +60,7 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
                            
-                            @if(!isset($equity->doc1_2))
+                            @if(!isset($loan->doc1_2))
 
 
                                 <div class="file-details-fail">
@@ -68,8 +70,8 @@
                                         <input type="hidden" name="field" value="doc1_2">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc1_2"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="1" form_id="2" id="doc1_2">
+                                             Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="1" form_id="2" id="doc1_2">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -77,9 +79,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc1_2}}
+                                    {{$loan->doc1_2}}
                                     <i class="icofont-tick-mark" for="doc1_2"></i>
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc1_2.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
                         </div>
                     </div>
@@ -90,7 +94,7 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
                           
 
-                            @if(!isset($equity->doc1_3))
+                            @if(!isset($loan->doc1_3))
 
 
                                 <div class="file-details-fail">
@@ -100,8 +104,8 @@
                                         <input type="hidden" name="field" value="doc1_3">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc1_3"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="1" form_id="3" id="doc1_3">
+                                            Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="1" form_id="3" id="doc1_3">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -109,9 +113,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc1_3}}
+                                    {{$loan->doc1_3}}
                                     <i class="icofont-tick-mark" for="doc1_3"></i>
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc1_3.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
 
                         </div>
@@ -134,7 +140,7 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc1_2))
+                            @if(!isset($loan->doc1_2))
 
 
                                 <div class="file-details-fail">
@@ -144,8 +150,8 @@
                                         <input type="hidden" name="field" value="doc1_2">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc1_2"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="1" form_id="2" id="doc1_2">
+                                             Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="1" form_id="2" id="doc1_2">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -153,7 +159,7 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc1_2}}
+                                    {{$loan->doc1_2}}
                                     <i class="icofont-tick-mark" for="doc1_2"></i>
                                 </div>
                             @endif
@@ -176,7 +182,7 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc1_3))
+                            @if(!isset($loan->doc1_3))
 
 
                                 <div class="file-details-fail">
@@ -187,7 +193,7 @@
                                         <label >
 
                                             <i class="icofont-cloud-upload" for="doc1_3"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="1" form_id="3" id="doc1_3">
+                                            <input  class="d-none upload_form_data" main_form="1" form_id="3" id="doc1_3">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -195,7 +201,7 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc1_3}}
+                                    {{$loan->doc1_3}}
                                     <i class="icofont-tick-mark" for="doc1_3"></i>
                                 </div>
                             @endif
@@ -222,7 +228,7 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc1_4))
+                            @if(!isset($loan->doc1_4))
 
 
                                 <div class="file-details-fail">
@@ -232,8 +238,8 @@
                                         <input type="hidden" name="field" value="doc1_4">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc1_4"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="1" form_id="4" id="doc1_4">
+                                           </i> Selecione o documento
+                                            <input class="d-none upload_form_data" main_form="1" form_id="4" id="doc1_4">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -241,9 +247,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc1_4}}
+                                    {{$loan->doc1_4}}
                                     <i class="icofont-tick-mark" for="doc1_4"></i>
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc1_4.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
 
                         </div>
@@ -255,7 +263,7 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc1_5))
+                            @if(!isset($loan->doc1_5))
 
 
                                 <div class="file-details-fail">
@@ -265,8 +273,8 @@
                                         <input type="hidden" name="field" value="doc1_5">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc1_5"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="1" form_id="5" id="doc1_5">
+                                            </i> Selecione o documento
+                                            <input class="d-none upload_form_data" main_form="1" form_id="5" id="doc1_5">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -274,9 +282,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc1_5}}
+                                    {{$loan->doc1_5}}
                                     <i class="icofont-tick-mark" for="doc1_5"></i>
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc1_5.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
 
                         </div>
@@ -288,7 +298,7 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc1_6))
+                            @if(!isset($loan->doc1_6))
 
 
                                 <div class="file-details-fail">
@@ -298,8 +308,8 @@
                                         <input type="hidden" name="field" value="doc1_6">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc1_6"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="1" form_id="6" id="doc1_6">
+                                             Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="1" form_id="6" id="doc1_6">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -307,9 +317,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc1_6}}
+                                    {{$loan->doc1_6}}
                                     <i class="icofont-tick-mark" for="doc1_6"></i>
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc1_6.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
 
                         </div>
@@ -321,7 +333,7 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc1_7))
+                            @if(!isset($loan->doc1_7))
 
 
                                 <div class="file-details-fail">
@@ -331,8 +343,8 @@
                                         <input type="hidden" name="field" value="doc1_7">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc1_7"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="1" form_id="7" id="doc1_7">
+                                             Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="1" form_id="7" id="doc1_7">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -340,9 +352,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc1_7}}
+                                    {{$loan->doc1_7}}
                                     <i class="icofont-tick-mark" for="doc1_7"></i>
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc1_7.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
 
                         </div>
@@ -354,7 +368,7 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc1_8))
+                            @if(!isset($loan->doc1_8))
 
 
                                 <div class="file-details-fail">
@@ -364,8 +378,8 @@
                                         <input type="hidden" name="field" value="doc1_8">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc1_8"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="1" form_id="8" id="doc1_8">
+                                             Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="1" form_id="8" id="doc1_8">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -373,9 +387,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc1_8}}
+                                    {{$loan->doc1_8}}
                                     <i class="icofont-tick-mark" for="doc1_8"></i>
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc1_8.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
 
                         </div>
@@ -400,7 +416,7 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc1_9))
+                            @if(!isset($loan->doc1_9))
 
 
                                 <div class="file-details-fail">
@@ -410,8 +426,8 @@
                                         <input type="hidden" name="field" value="doc1_9">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc1_9"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="1" form_id="9" id="doc1_9">
+                                           Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="1" form_id="9" id="doc1_9">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -419,9 +435,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc1_9}}
+                                    {{$loan->doc1_9}}
                                     <i class="icofont-tick-mark" for="doc1_9"></i>
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc1_9.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
 
                         </div>
@@ -433,7 +451,7 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc1_10))
+                            @if(!isset($loan->doc1_10))
 
 
                                 <div class="file-details-fail">
@@ -443,8 +461,8 @@
                                         <input type="hidden" name="field" value="doc1_10">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc1_10"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="1" form_id="10" id="doc1_10">
+                                             Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="1" form_id="10" id="doc1_10">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -452,9 +470,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc1_10}}
-                                    <i class="icofont-tick-mark" for="doc1_10"></i>
+                                    {{$loan->doc1_10}}
+                                   
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc1_10.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
 
                         </div>
@@ -466,7 +486,7 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc1_11))
+                            @if(!isset($loan->doc1_11))
 
 
                                 <div class="file-details-fail">
@@ -476,8 +496,8 @@
                                         <input type="hidden" name="field" value="doc1_11">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc1_11"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="1" form_id="11" id="doc1_11">
+                                             Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="1" form_id="11" id="doc1_11">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -485,9 +505,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc1_11}}
+                                    {{$loan->doc1_11}}
                                     <i class="icofont-tick-mark" for="doc1_11"></i>
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc1_11.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
 
                         </div>
@@ -499,7 +521,7 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc1_12))
+                            @if(!isset($loan->doc1_12))
 
 
                                 <div class="file-details-fail">
@@ -509,8 +531,8 @@
                                         <input type="hidden" name="field" value="doc1_12">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc1_12"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="1" form_id="12" id="doc1_12">
+                                            Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="1" form_id="12" id="doc1_12">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -518,9 +540,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc1_12}}
+                                    {{$loan->doc1_12}}
                                     <i class="icofont-tick-mark" for="doc1_12"></i>
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc1_2.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
 
                         </div>
@@ -532,7 +556,7 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc1_13))
+                            @if(!isset($loan->doc1_13))
 
 
                                 <div class="file-details-fail">
@@ -542,8 +566,8 @@
                                         <input type="hidden" name="field" value="doc1_13">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc1_13"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="1" form_id="13" id="doc1_13">
+                                             Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="1" form_id="13" id="doc1_13">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -551,9 +575,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc1_13}}
+                                    {{$loan->doc1_13}}
                                     <i class="icofont-tick-mark" for="doc1_13"></i>
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc1_13.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
 
                         </div>
@@ -565,7 +591,7 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc1_14))
+                            @if(!isset($loan->doc1_14))
 
 
                                 <div class="file-details-fail">
@@ -575,8 +601,8 @@
                                         <input type="hidden" name="field" value="doc1_14">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc1_14"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="1" form_id="14" id="doc1_14">
+                                           Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="1" form_id="14" id="doc1_14">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -584,9 +610,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc1_14}}
+                                    {{$loan->doc1_14}}
                                     <i class="icofont-tick-mark" for="doc1_14"></i>
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc1_14.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
 
                         </div>
@@ -598,7 +626,7 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc1_15))
+                            @if(!isset($loan->doc1_15))
 
 
                                 <div class="file-details-fail">
@@ -608,8 +636,8 @@
                                         <input type="hidden" name="field" value="doc1_15">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc1_15"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="1" form_id="15" id="doc1_15">
+                                            Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="1" form_id="15" id="doc1_15">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -617,9 +645,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc1_15}}
+                                    {{$loan->doc1_15}}
                                     <i class="icofont-tick-mark" for="doc1_15"></i>
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc1_15.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
 
                         </div>
@@ -631,7 +661,7 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc1_16))
+                            @if(!isset($loan->doc1_16))
 
 
                                 <div class="file-details-fail">
@@ -641,8 +671,8 @@
                                         <input type="hidden" name="field" value="doc1_16">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc1_16"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="1" form_id="16" id="doc1_16">
+                                             Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="1" form_id="16" id="doc1_16">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -650,9 +680,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc1_16}}
+                                    {{$loan->doc1_16}}
                                     <i class="icofont-tick-mark" for="doc1_16"></i>
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc1_16.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
 
                         </div>
@@ -664,7 +696,7 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc1_17))
+                            @if(!isset($loan->doc1_17))
 
 
                                 <div class="file-details-fail">
@@ -674,8 +706,8 @@
                                         <input type="hidden" name="field" value="doc1_17">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc1_17"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="1" form_id="17" id="doc1_17">
+                                           Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="1" form_id="17" id="doc1_17">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -683,9 +715,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc1_17}}
+                                    {{$loan->doc1_17}}
                                     <i class="icofont-tick-mark" for="doc1_17"></i>
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc1_17.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
 
                         </div>
@@ -725,18 +759,18 @@
 
                            
 
-                            @if(!isset($equity->doc2_1))
+                            @if(!isset($loan->doc2_1))
 
 
                                 <div class="file-details-fail">
                                     <form id="form2_1" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="Real estate financing">
                                         <input type="hidden" name="field" value="doc2_1">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc2_1"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="2" form_id="1" id="doc2_1">
+                                             Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="2" form_id="1" id="doc2_1">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -744,9 +778,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc2_1}}
+                                    {{$loan->doc2_1}}
                                     <i class="icofont-tick-mark" for="doc2_1"></i>
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc2_1.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
                         </div>
                     </div>
@@ -757,18 +793,18 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
                            
-                            @if(!isset($equity->doc2_2))
+                            @if(!isset($loan->doc2_2))
 
 
                                 <div class="file-details-fail">
                                     <form id="form2_2" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="Real estate financing">
                                         <input type="hidden" name="field" value="doc2_2">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc2_2"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="2" form_id="2" id="doc2_2">
+                                            Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="2" form_id="2" id="doc2_2">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -776,9 +812,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc2_2}}
+                                    {{$loan->doc2_2}}
                                     <i class="icofont-tick-mark" for="doc2_2"></i>
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc2_2.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
                         </div>
                     </div>
@@ -789,18 +827,18 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
                           
 
-                            @if(!isset($equity->doc2_3))
+                            @if(!isset($loan->doc2_3))
 
 
                                 <div class="file-details-fail">
                                     <form id="form2_3" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="Real estate financing">
                                         <input type="hidden" name="field" value="doc2_3">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc2_3"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="2" form_id="3" id="doc2_3">
+                                             Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="2" form_id="3" id="doc2_3">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -808,9 +846,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc2_3}}
+                                    {{$loan->doc2_3}}
                                     <i class="icofont-tick-mark" for="doc2_3"></i>
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc2_3.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
 
                         </div>
@@ -833,18 +873,18 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc1_2))
+                            @if(!isset($loan->doc1_2))
 
 
                                 <div class="file-details-fail">
                                     <form id="form1_2" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="Real estate financing">
                                         <input type="hidden" name="field" value="doc1_2">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc1_2"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="1" form_id="2" id="doc1_2">
+                                             Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="1" form_id="2" id="doc1_2">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -852,7 +892,7 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc1_2}}
+                                    {{$loan->doc1_2}}
                                     <i class="icofont-tick-mark" for="doc1_2"></i>
                                 </div>
                             @endif
@@ -875,18 +915,18 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc1_3))
+                            @if(!isset($loan->doc1_3))
 
 
                                 <div class="file-details-fail">
                                     <form id="form1_3" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="Real estate financing">
                                         <input type="hidden" name="field" value="doc1_3">
                                         <label >
 
                                             <i class="icofont-cloud-upload" for="doc1_3"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="1" form_id="3" id="doc1_3">
+                                            <input  class="d-none upload_form_data" main_form="1" form_id="3" id="doc1_3">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -894,7 +934,7 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc1_3}}
+                                    {{$loan->doc1_3}}
                                     <i class="icofont-tick-mark" for="doc1_3"></i>
                                 </div>
                             @endif
@@ -921,18 +961,18 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc2_4))
+                            @if(!isset($loan->doc2_4))
 
 
                                 <div class="file-details-fail">
                                     <form id="form2_4" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="Real estate financing">
                                         <input type="hidden" name="field" value="doc2_4">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc2_4"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="2" form_id="4" id="doc2_4">
+                                             Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="2" form_id="4" id="doc2_4">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -940,9 +980,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc2_4}}
+                                    {{$loan->doc2_4}}
                                     <i class="icofont-tick-mark" for="doc2_4"></i>
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc2_4.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
 
                         </div>
@@ -954,18 +996,18 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc2_5))
+                            @if(!isset($loan->doc2_5))
 
 
                                 <div class="file-details-fail">
                                     <form id="form2_5" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="Real estate financing">
                                         <input type="hidden" name="field" value="doc2_5">
                                         <label >
 
                                             <i class="icofont-cloud-upload" for="doc2_5"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="2" form_id="5" id="doc2_5">
+                                            <input  class="d-none upload_form_data" main_form="2" form_id="5" id="doc2_5">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -973,9 +1015,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc2_5}}
-                                    <i class="icofont-tick-mark" for="doc2_5"></i>
+                                    {{$loan->doc2_5}}
+                                  
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc2_5.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
 
                         </div>
@@ -987,18 +1031,18 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc2_6))
+                            @if(!isset($loan->doc2_6))
 
 
                                 <div class="file-details-fail">
                                     <form id="form2_6" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="Real estate financing">
                                         <input type="hidden" name="field" value="doc2_6">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc2_6"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="2" form_id="6" id="doc2_6">
+                                            Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="2" form_id="6" id="doc2_6">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -1006,9 +1050,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc2_6}}
+                                    {{$loan->doc2_6}}
                                     <i class="icofont-tick-mark" for="doc2_6"></i>
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc2_6.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
 
                         </div>
@@ -1020,18 +1066,18 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc2_7))
+                            @if(!isset($loan->doc2_7))
 
 
                                 <div class="file-details-fail">
                                     <form id="form2_7" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="Real estate financing">
                                         <input type="hidden" name="field" value="doc2_7">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc2_7"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="2" form_id="7" id="doc2_7">
+                                             Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="2" form_id="7" id="doc2_7">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -1039,9 +1085,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc2_7}}
+                                    {{$loan->doc2_7}}
                                     <i class="icofont-tick-mark" for="doc2_7"></i>
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc2_7.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
 
                         </div>
@@ -1053,18 +1101,18 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc2_8))
+                            @if(!isset($loan->doc2_8))
 
 
                                 <div class="file-details-fail">
                                     <form id="form2_8" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="Real estate financing">
                                         <input type="hidden" name="field" value="doc2_8">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc2_8"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="2" form_id="8" id="doc2_8">
+                                           Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="2" form_id="8" id="doc2_8">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -1072,9 +1120,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc2_8}}
+                                    {{$loan->doc2_8}}
                                     <i class="icofont-tick-mark" for="doc2_8"></i>
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc2_8.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
 
                         </div>
@@ -1099,18 +1149,18 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc2_9))
+                            @if(!isset($loan->doc2_9))
 
 
                                 <div class="file-details-fail">
                                     <form id="form2_9" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="Real estate financing">
                                         <input type="hidden" name="field" value="doc2_9">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc2_9"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="2" form_id="9" id="doc2_9">
+                                           Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="2" form_id="9" id="doc2_9">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -1118,9 +1168,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc2_9}}
+                                    {{$loan->doc2_9}}
                                     <i class="icofont-tick-mark" for="doc2_9"></i>
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc2_9.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
 
                         </div>
@@ -1132,18 +1184,18 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc2_10))
+                            @if(!isset($loan->doc2_10))
 
 
                                 <div class="file-details-fail">
                                     <form id="form2_10" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="Real estate financing">
                                         <input type="hidden" name="field" value="doc2_10">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc2_10"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="2" form_id="10" id="doc2_10">
+                                            Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="2" form_id="10" id="doc2_10">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -1151,9 +1203,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc2_10}}
+                                    {{$loan->doc2_10}}
                                     <i class="icofont-tick-mark" for="doc2_10"></i>
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc2_10.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
 
                         </div>
@@ -1165,18 +1219,18 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc2_11))
+                            @if(!isset($loan->doc2_11))
 
 
                                 <div class="file-details-fail">
                                     <form id="form2_11" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="Real estate financing">
                                         <input type="hidden" name="field" value="doc2_11">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc2_11"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="2" form_id="11" id="doc2_11">
+                                             Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="2" form_id="11" id="doc2_11">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -1184,9 +1238,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc2_11}}
+                                    {{$loan->doc2_11}}
                                     <i class="icofont-tick-mark" for="doc2_11"></i>
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc2_11.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
 
                         </div>
@@ -1198,18 +1254,18 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc2_12))
+                            @if(!isset($loan->doc2_12))
 
 
                                 <div class="file-details-fail">
                                     <form id="form2_12" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="Real estate financing">
                                         <input type="hidden" name="field" value="doc2_12">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc2_12"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="2" form_id="12" id="doc2_12">
+                                             Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="2" form_id="12" id="doc2_12">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -1217,9 +1273,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc2_12}}
+                                    {{$loan->doc2_12}}
                                     <i class="icofont-tick-mark" for="doc2_12"></i>
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc2_12.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
 
                         </div>
@@ -1231,18 +1289,18 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc2_13))
+                            @if(!isset($loan->doc2_13))
 
 
                                 <div class="file-details-fail">
                                     <form id="form2_13" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="Real estate financing">
                                         <input type="hidden" name="field" value="doc2_13">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc2_13"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="2" form_id="13" id="doc2_13">
+                                             Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="2" form_id="13" id="doc2_13">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -1250,9 +1308,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc2_13}}
+                                    {{$loan->doc2_13}}
                                     <i class="icofont-tick-mark" for="doc2_13"></i>
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc2_13.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
 
                         </div>
@@ -1264,18 +1324,18 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc2_14))
+                            @if(!isset($loan->doc2_14))
 
 
                                 <div class="file-details-fail">
                                     <form id="form2_14" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="Real estate financing">
                                         <input type="hidden" name="field" value="doc2_14">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc2_14"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="2" form_id="14" id="doc2_14">
+                                          Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="2" form_id="14" id="doc2_14">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -1283,9 +1343,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc2_14}}
+                                    {{$loan->doc2_14}}
                                     <i class="icofont-tick-mark" for="doc2_14"></i>
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc2_14.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
 
                         </div>
@@ -1297,18 +1359,18 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc2_15))
+                            @if(!isset($loan->doc2_15))
 
 
                                 <div class="file-details-fail">
                                     <form id="form2_15" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="Real estate financing">
                                         <input type="hidden" name="field" value="doc2_15">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc2_15"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="2" form_id="15" id="doc2_15">
+                                             Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="2" form_id="15" id="doc2_15">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -1316,9 +1378,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc2_15}}
+                                    {{$loan->doc2_15}}
                                     <i class="icofont-tick-mark" for="doc2_15"></i>
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc2_15.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
 
                         </div>
@@ -1330,27 +1394,30 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc2_16))
+                            @if(!isset($loan->doc2_16))
 
 
                                 <div class="file-details-fail">
                                     <form id="form2_16" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="Real estate financing">
                                         <input type="hidden" name="field" value="doc2_16">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc2_16"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="2" form_id="16" id="doc2_16">
+                                             Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="2" form_id="16" id="doc2_16">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
+                                        
                                     </form>
                                 </div>
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc2_16}}
+                                    {{$loan->doc2_16}}
                                     <i class="icofont-tick-mark" for="doc2_16"></i>
+                                    <a href="{{asset('assets/dashboard/document/'.$loan->doc2_16.'')}}" download=""> <i
+                                        class="icofont-download"></i></a>
                                 </div>
                             @endif
 
@@ -1363,18 +1430,18 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc2_17))
+                            @if(!isset($loan->doc2_17))
 
 
                                 <div class="file-details-fail">
                                     <form id="form2_17" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="Real estate financing">
                                         <input type="hidden" name="field" value="doc2_17">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc2_17"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="2" form_id="17" id="doc2_17">
+                                             Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="2" form_id="17" id="doc2_17">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -1382,8 +1449,10 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc2_17}}
+                                    {{$loan->doc2_17}}
                                     <i class="icofont-tick-mark" for="doc2_17"></i>
+                                    <a href="{{asset('assets/dashboard/document/'.$loan->doc2_17.'')}}" download=""> <i
+                                        class="icofont-download"></i></a>
                                 </div>
                             @endif
 
@@ -1425,18 +1494,18 @@
 
                            
 
-                            @if(!isset($equity->doc3_1))
+                            @if(!isset($loan->doc3_1))
 
 
                                 <div class="file-details-fail">
                                     <form id="form3_1" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="structured">
                                         <input type="hidden" name="field" value="doc3_1">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc3_1"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="3" form_id="1" id="doc3_1">
+                                            Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="3" form_id="1" id="doc3_1">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -1444,9 +1513,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc3_1}}
+                                    {{$loan->doc3_1}}
                                     <i class="icofont-tick-mark" for="doc3_1"></i>
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc3_1.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
                         </div>
                     </div>
@@ -1457,18 +1528,18 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
                            
-                            @if(!isset($equity->doc3_2))
+                            @if(!isset($loan->doc3_2))
 
 
                                 <div class="file-details-fail">
                                     <form id="form3_2" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="structured">
                                         <input type="hidden" name="field" value="doc3_2">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc3_2"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="3" form_id="2" id="doc3_2">
+                                            Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="3" form_id="2" id="doc3_2">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -1476,9 +1547,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc3_2}}
+                                    {{$loan->doc3_2}}
                                     <i class="icofont-tick-mark" for="doc3_2"></i>
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc3_2.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
                         </div>
                     </div>
@@ -1489,18 +1562,18 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
                           
 
-                            @if(!isset($equity->doc3_3))
+                            @if(!isset($loan->doc3_3))
 
 
                                 <div class="file-details-fail">
                                     <form id="form3_3" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="structured">
                                         <input type="hidden" name="field" value="doc3_3">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc3_3"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="3" form_id="3" id="doc3_3">
+                                             Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="3" form_id="3" id="doc3_3">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -1508,9 +1581,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc3_3}}
+                                    {{$loan->doc3_3}}
                                     <i class="icofont-tick-mark" for="doc3_3"></i>
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc3_3.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
 
                         </div>
@@ -1533,18 +1608,18 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc1_2))
+                            @if(!isset($loan->doc1_2))
 
 
                                 <div class="file-details-fail">
                                     <form id="form1_2" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="structured">
                                         <input type="hidden" name="field" value="doc1_2">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc1_2"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="1" form_id="2" id="doc1_2">
+                                             Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="1" form_id="2" id="doc1_2">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -1552,7 +1627,7 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc1_2}}
+                                    {{$loan->doc1_2}}
                                     <i class="icofont-tick-mark" for="doc1_2"></i>
                                 </div>
                             @endif
@@ -1575,18 +1650,18 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc1_3))
+                            @if(!isset($loan->doc1_3))
 
 
                                 <div class="file-details-fail">
                                     <form id="form1_3" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="structured">
                                         <input type="hidden" name="field" value="doc1_3">
                                         <label >
 
                                             <i class="icofont-cloud-upload" for="doc1_3"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="1" form_id="3" id="doc1_3">
+                                            <input  class="d-none upload_form_data" main_form="1" form_id="3" id="doc1_3">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -1594,7 +1669,7 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc1_3}}
+                                    {{$loan->doc1_3}}
                                     <i class="icofont-tick-mark" for="doc1_3"></i>
                                 </div>
                             @endif
@@ -1621,18 +1696,18 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc3_4))
+                            @if(!isset($loan->doc3_4))
 
 
                                 <div class="file-details-fail">
                                     <form id="form3_4" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="structured">
                                         <input type="hidden" name="field" value="doc3_4">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc3_4"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="3" form_id="4" id="doc3_4">
+                                             Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="3" form_id="4" id="doc3_4">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -1640,9 +1715,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc3_4}}
+                                    {{$loan->doc3_4}}
                                     <i class="icofont-tick-mark" for="doc3_4"></i>
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc3_4.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
 
                         </div>
@@ -1654,18 +1731,18 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc3_5))
+                            @if(!isset($loan->doc3_5))
 
 
                                 <div class="file-details-fail">
                                     <form id="form3_5" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="structured">
                                         <input type="hidden" name="field" value="doc3_5">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc3_5"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="3" form_id="5" id="doc3_5">
+                                             Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="3" form_id="5" id="doc3_5">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -1673,9 +1750,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc3_5}}
+                                    {{$loan->doc3_5}}
                                     <i class="icofont-tick-mark" for="doc3_5"></i>
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc3_5.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
 
                         </div>
@@ -1687,18 +1766,18 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc3_6))
+                            @if(!isset($loan->doc3_6))
 
 
                                 <div class="file-details-fail">
                                     <form id="form3_6" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="structured">
                                         <input type="hidden" name="field" value="doc3_6">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc3_6"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="3" form_id="6" id="doc3_6">
+                                           Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="3" form_id="6" id="doc3_6">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -1706,9 +1785,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc3_6}}
+                                    {{$loan->doc3_6}}
                                     <i class="icofont-tick-mark" for="doc3_6"></i>
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc3_6.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
 
                         </div>
@@ -1720,18 +1801,18 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc3_7))
+                            @if(!isset($loan->doc3_7))
 
 
                                 <div class="file-details-fail">
                                     <form id="form3_7" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="structured">
                                         <input type="hidden" name="field" value="doc3_7">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc3_7"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="3" form_id="7" id="doc3_7">
+                                            Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="3" form_id="7" id="doc3_7">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -1739,9 +1820,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc3_7}}
+                                    {{$loan->doc3_7}}
                                     <i class="icofont-tick-mark" for="doc3_7"></i>
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc3_7.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
 
                         </div>
@@ -1753,18 +1836,18 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc3_8))
+                            @if(!isset($loan->doc3_8))
 
 
                                 <div class="file-details-fail">
                                     <form id="form3_8" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="structured">
                                         <input type="hidden" name="field" value="doc3_8">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc3_8"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="3" form_id="8" id="doc3_8">
+                                            Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="3" form_id="8" id="doc3_8">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -1772,9 +1855,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc3_8}}
+                                    {{$loan->doc3_8}}
                                     <i class="icofont-tick-mark" for="doc3_8"></i>
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc3_8.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
 
                         </div>
@@ -1799,18 +1884,18 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc3_9))
+                            @if(!isset($loan->doc3_9))
 
 
                                 <div class="file-details-fail">
                                     <form id="form3_9" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="structured">
                                         <input type="hidden" name="field" value="doc3_9">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc3_9"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="3" form_id="9" id="doc3_9">
+                                             Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="3" form_id="9" id="doc3_9">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -1818,9 +1903,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc3_9}}
+                                    {{$loan->doc3_9}}
                                     <i class="icofont-tick-mark" for="doc3_9"></i>
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc3_9.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
 
                         </div>
@@ -1832,18 +1919,18 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc3_10))
+                            @if(!isset($loan->doc3_10))
 
 
                                 <div class="file-details-fail">
                                     <form id="form3_10" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="structured">
                                         <input type="hidden" name="field" value="doc3_10">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc3_10"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="3" form_id="10" id="doc3_10">
+                                             Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="3" form_id="10" id="doc3_10">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -1851,9 +1938,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc3_10}}
+                                    {{$loan->doc3_10}}
                                     <i class="icofont-tick-mark" for="doc3_10"></i>
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc3_10.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
 
                         </div>
@@ -1865,18 +1954,18 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc3_11))
+                            @if(!isset($loan->doc3_11))
 
 
                                 <div class="file-details-fail">
                                     <form id="form3_11" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="structured">
                                         <input type="hidden" name="field" value="doc3_11">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc3_11"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="3" form_id="11" id="doc3_11">
+                                            Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="3" form_id="11" id="doc3_11">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -1884,9 +1973,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc3_11}}
+                                    {{$loan->doc3_11}}
                                     <i class="icofont-tick-mark" for="doc3_11"></i>
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc3_11.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
 
                         </div>
@@ -1898,18 +1989,18 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc3_12))
+                            @if(!isset($loan->doc3_12))
 
 
                                 <div class="file-details-fail">
                                     <form id="form3_12" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="structured">
                                         <input type="hidden" name="field" value="doc3_12">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc3_12"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="3" form_id="12" id="doc3_12">
+                                             Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="3" form_id="12" id="doc3_12">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -1917,8 +2008,10 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc3_12}}
+                                    {{$loan->doc3_12}}
                                     <i class="icofont-tick-mark" for="doc3_12"></i>
+                                    <a href="{{asset('assets/dashboard/document/'.$loan->doc3_12.'')}}" download=""> <i
+                                        class="icofont-download"></i></a>
                                 </div>
                             @endif
 
@@ -1931,18 +2024,18 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc3_13))
+                            @if(!isset($loan->doc3_13))
 
 
                                 <div class="file-details-fail">
                                     <form id="form3_13" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="structured">
                                         <input type="hidden" name="field" value="doc3_13">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc3_13"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="3" form_id="13" id="doc3_13">
+                                             Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="3" form_id="13" id="doc3_13">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -1950,9 +2043,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc3_13}}
+                                    {{$loan->doc3_13}}
                                     <i class="icofont-tick-mark" for="doc3_13"></i>
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc3_13.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
 
                         </div>
@@ -1964,18 +2059,18 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc3_14))
+                            @if(!isset($loan->doc3_14))
 
 
                                 <div class="file-details-fail">
                                     <form id="form3_14" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="structured">
                                         <input type="hidden" name="field" value="doc3_14">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc3_14"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="3" form_id="14" id="doc3_14">
+                                            Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="3" form_id="14" id="doc3_14">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -1983,9 +2078,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc3_14}}
+                                    {{$loan->doc3_14}}
                                     <i class="icofont-tick-mark" for="doc3_14"></i>
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc3_14.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
 
                         </div>
@@ -1997,18 +2094,18 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc3_15))
+                            @if(!isset($loan->doc3_15))
 
 
                                 <div class="file-details-fail">
                                     <form id="form3_15" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="structured">
                                         <input type="hidden" name="field" value="doc3_15">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc3_15"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="3" form_id="15" id="doc3_15">
+                                      Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="3" form_id="15" id="doc3_15">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -2016,9 +2113,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc3_15}}
+                                    {{$loan->doc3_15}}
                                     <i class="icofont-tick-mark" for="doc3_15"></i>
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc3_15.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
 
                         </div>
@@ -2030,18 +2129,18 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc3_16))
+                            @if(!isset($loan->doc3_16))
 
 
                                 <div class="file-details-fail">
                                     <form id="form3_16" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="structured">
                                         <input type="hidden" name="field" value="doc3_16">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc3_16"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="3" form_id="16" id="doc3_16">
+                                             Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="3" form_id="16" id="doc3_16">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -2049,9 +2148,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc3_16}}
+                                    {{$loan->doc3_16}}
                                     <i class="icofont-tick-mark" for="doc3_16"></i>
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc3_16.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
 
                         </div>
@@ -2063,18 +2164,18 @@
                         <div class="display-msg-success d-flex justify-content-start align-items-center">
 
 
-                            @if(!isset($equity->doc3_17))
+                            @if(!isset($loan->doc3_17))
 
 
                                 <div class="file-details-fail">
                                     <form id="form3_17" action="{{url('user/upload/loan')}}" method="post" enctype="multipart/form-data">
                                         @csrf
-                                        <input type="hidden" name="type" value="Home equity">
+                                        <input type="hidden" name="type" value="structured">
                                         <input type="hidden" name="field" value="doc3_17">
                                         <label >
 
-                                            <i class="icofont-cloud-upload" for="doc3_17"></i> Selecione o documento
-                                            <input type="file" name="file" class="d-none upload_form_data" main_form="3" form_id="17" id="doc3_17">
+                                             Selecione o documento
+                                            <input  class="d-none upload_form_data" main_form="3" form_id="17" id="doc3_17">
                                             <i class="icofont-exclamation error-icon"></i>
                                         </label>
                                     </form>
@@ -2082,9 +2183,11 @@
 
                             @else
                                 <div class="file-details">
-                                    {{$equity->doc3_17}}
+                                    {{$loan->doc3_17}}
                                     <i class="icofont-tick-mark" for="doc3_17"></i>
                                 </div>
+                                <a href="{{asset('assets/dashboard/document/'.$loan->doc3_17.'')}}" download=""> <i
+                                    class="icofont-download"></i></a>
                             @endif
 
                         </div>
